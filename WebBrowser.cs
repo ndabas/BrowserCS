@@ -46,6 +46,7 @@ namespace ND.WebBrowser
       InitializeComponent();
     }
     
+    [STAThread]
     public static void Main(string[] args)
     {
       Application.Run(new WebBrowserForm());
