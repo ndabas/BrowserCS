@@ -1,61 +1,51 @@
-namespace Techinox.WebBrowser
+namespace ND.WebBrowser
 {
   
   using System;
-  using Microsoft.Win32;
   using System.Drawing;
   using System.ComponentModel;
-  using System.WinForms;
+  using System.Windows.Forms;
+  using Microsoft.Win32;
   using AxSHDocVw;
   using MSHTML;
-  using System.Runtime.InteropServices;
-
-  public class WebBrowserForm : System.WinForms.Form
+  
+  public class WebBrowserForm : Form
   {
-
-    private Container m_Components;
-    private System.Resources.ResourceManager m_Resources;
-    private AxWebBrowser m_axWebBrowser;
-    private System.WinForms.MainMenu m_mnuMain;
-    private System.WinForms.StatusBarPanel m_stpSecure;
-    private System.WinForms.StatusBarPanel m_stpZone;
-    private System.WinForms.StatusBarPanel m_stpOffline;
-    private System.WinForms.StatusBarPanel m_stpProgress;
-    private System.WinForms.StatusBarPanel m_stpMessages;
-    private System.WinForms.StatusBar m_barStatus;
-    private System.WinForms.ToolBarButton m_tbtEdit;
-    private System.WinForms.ToolBarButton m_Seperator3;
-    private System.WinForms.ToolBarButton m_tbtPrint;
-    private System.WinForms.ToolBarButton m_tbtMail;
-    private System.WinForms.ToolBarButton m_tbtSeperator2;
-    private System.WinForms.ToolBarButton m_tbtHistory;
-    private System.WinForms.ToolBarButton m_tbtFavourites;
-    private System.WinForms.ToolBarButton m_tbtSearch;
-    private System.WinForms.ToolBarButton m_tbtSeperator1;
-    private System.WinForms.ToolBarButton m_tbtHome;
-    private System.WinForms.ToolBarButton m_tbtRefresh;
-    private System.WinForms.ToolBarButton m_tbtStop;
-    private System.WinForms.ToolBarButton m_tbtForward;
-    private System.WinForms.ToolBarButton m_tbtBack;
-    private System.WinForms.ToolBar m_barStandardTB;
-    private System.WinForms.ImageList m_imlToolbarCold;
-    private System.WinForms.ImageList m_imlToolbarHot;
-    private System.WinForms.ComboBox m_cmbAddress;
-    private System.WinForms.Button m_btnGo;
-    private System.WinForms.Label m_lblAddress;
-    private System.WinForms.Panel m_barAddress;
+    private System.Resources.ResourceManager Resourcer;
+    private AxWebBrowser AxWebBrowser;
+    private MainMenu MenuMain;
+    private StatusBarPanel StatusSecure;
+    private StatusBarPanel StatusZone;
+    private StatusBarPanel StatusOffline;
+    private StatusBarPanel StatusProgress;
+    private StatusBarPanel StatusMessages;
+    private StatusBar BarStatus;
+    private ToolBarButton TbEdit;
+    private ToolBarButton TbSeperator3;
+    private ToolBarButton TbPrint;
+    private ToolBarButton TbMail;
+    private ToolBarButton TbSeperator2;
+    private ToolBarButton TbHistory;
+    private ToolBarButton TbFavorites;
+    private ToolBarButton TbSearch;
+    private ToolBarButton TbSeperator1;
+    private ToolBarButton TbHome;
+    private ToolBarButton TbRefresh;
+    private ToolBarButton TbStop;
+    private ToolBarButton TbForward;
+    private ToolBarButton TbBack;
+    private ToolBar BarStandardToolbar;
+    private ImageList ImagesToolbar;
+    private ComboBox ComboAddress;
+    private Button ButtonGo;
+    private Label LabelAddress;
+    private Panel BarAddress;
 
     public WebBrowserForm()
     {
       InitializeComponent();
     }
-
-    public override void Dispose()
-    {
-      base.Dispose();
-      m_Components.Dispose();
-    }
-
+    
     public static void Main(string[] args)
     {
       Application.Run(new WebBrowserForm());
@@ -63,341 +53,321 @@ namespace Techinox.WebBrowser
     
     private void InitializeComponent()
     {
-      this.m_Resources = new System.Resources.ResourceManager(typeof(WebBrowserForm));
-      this.m_Components = new Container();
-      this.m_axWebBrowser = new AxWebBrowser();
-      this.m_mnuMain = new MainMenu();
-      this.m_barStatus = new StatusBar();
-      this.m_stpZone = new StatusBarPanel();
-      this.m_stpSecure = new StatusBarPanel();
-      this.m_stpProgress = new StatusBarPanel();
-      this.m_stpOffline = new StatusBarPanel();
-      this.m_stpMessages = new StatusBarPanel();
-      this.m_tbtStop = new System.WinForms.ToolBarButton();
-      this.m_imlToolbarCold = new System.WinForms.ImageList();
-      this.m_Seperator3 = new System.WinForms.ToolBarButton();
-      this.m_tbtSeperator2 = new System.WinForms.ToolBarButton();
-      this.m_tbtSeperator1 = new System.WinForms.ToolBarButton();
-      this.m_tbtPrint = new System.WinForms.ToolBarButton();
-      this.m_tbtFavourites = new System.WinForms.ToolBarButton();
-      this.m_tbtBack = new System.WinForms.ToolBarButton();
-      this.m_tbtForward = new System.WinForms.ToolBarButton();
-      this.m_tbtHome = new System.WinForms.ToolBarButton();
-      this.m_imlToolbarHot = new System.WinForms.ImageList();
-      this.m_tbtEdit = new System.WinForms.ToolBarButton();
-      this.m_tbtHistory = new System.WinForms.ToolBarButton();
-      this.m_tbtSearch = new System.WinForms.ToolBarButton();
-      this.m_tbtRefresh = new System.WinForms.ToolBarButton();
-      this.m_tbtMail = new System.WinForms.ToolBarButton();
-      this.m_barStandardTB = new System.WinForms.ToolBar();
-      this.m_barAddress = new System.WinForms.Panel();
-      this.m_btnGo = new System.WinForms.Button();
-      this.m_cmbAddress = new System.WinForms.ComboBox();
-      this.m_lblAddress = new System.WinForms.Label();
+      this.Resourcer = new System.Resources.ResourceManager(typeof(WebBrowserForm));
+      this.AxWebBrowser = new AxWebBrowser();
+      this.MenuMain = new MainMenu();
+      this.BarStatus = new StatusBar();
+      this.StatusZone = new StatusBarPanel();
+      this.StatusSecure = new StatusBarPanel();
+      this.StatusProgress = new StatusBarPanel();
+      this.StatusOffline = new StatusBarPanel();
+      this.StatusMessages = new StatusBarPanel();
+      this.TbStop = new ToolBarButton();
+      this.TbSeperator3 = new ToolBarButton();
+      this.TbSeperator2 = new ToolBarButton();
+      this.TbSeperator1 = new ToolBarButton();
+      this.TbPrint = new ToolBarButton();
+      this.TbFavorites = new ToolBarButton();
+      this.TbBack = new ToolBarButton();
+      this.TbForward = new ToolBarButton();
+      this.TbHome = new ToolBarButton();
+      this.ImagesToolbar = new ImageList();
+      this.TbEdit = new ToolBarButton();
+      this.TbHistory = new ToolBarButton();
+      this.TbSearch = new ToolBarButton();
+      this.TbRefresh = new ToolBarButton();
+      this.TbMail = new ToolBarButton();
+      this.BarStandardToolbar = new ToolBar();
+      this.BarAddress = new Panel();
+      this.ButtonGo = new Button();
+      this.ComboAddress = new ComboBox();
+      this.LabelAddress = new Label();
       
-      m_stpProgress.BeginInit();
-      m_stpOffline.BeginInit();
-      m_axWebBrowser.BeginInit();
-      m_stpMessages.BeginInit();
-      m_stpZone.BeginInit();
-      m_stpSecure.BeginInit();
+      AxWebBrowser.BeginInit();
       
-      m_stpProgress.MinWidth = 0;
-      m_stpProgress.Style = System.WinForms.StatusBarPanelStyle.OwnerDraw;
+      StatusProgress.MinWidth = 0;
+      StatusProgress.Style = StatusBarPanelStyle.OwnerDraw;
       
-      m_stpOffline.MinWidth = 20;
-      m_stpOffline.Width = 20;
+      StatusOffline.MinWidth = 20;
+      StatusOffline.Width = 20;
       
-      m_stpMessages.MinWidth = 100;
-      m_stpMessages.Width = 136;
-      m_stpMessages.AutoSize = System.WinForms.StatusBarPanelAutoSize.Spring;
+      StatusMessages.MinWidth = 100;
+      StatusMessages.Width = 136;
+      StatusMessages.AutoSize = StatusBarPanelAutoSize.Spring;
       
-      m_stpZone.MinWidth = 136;
-      m_stpZone.Width = 136;
+      StatusZone.MinWidth = 136;
+      StatusZone.Width = 136;
             
-      m_stpSecure.MinWidth = 20;
-      m_stpSecure.Width = 20;
+      StatusSecure.MinWidth = 20;
+      StatusSecure.Width = 20;
       
-      m_barStatus.Dock = DockStyle.Bottom;
-      m_barStatus.BackColor = System.Drawing.SystemColors.Control;
-      m_barStatus.Location = new System.Drawing.Point(0, 297);
-      m_barStatus.Size = new System.Drawing.Size(392, 20);
-      m_barStatus.TabIndex = 0;
-      m_barStatus.ShowPanels = true;
-      m_barStatus.PanelClick += new System.WinForms.StatusBarPanelClickEventHandler(barStatus_PanelClick);
-      m_barStatus.DrawItem += new System.WinForms.StatusBarDrawItemEventHandler(barStatus_DrawItem);
-      m_barStatus.Panels.All = new System.WinForms.StatusBarPanel[] {m_stpMessages,
-         m_stpProgress,
-         m_stpOffline,
-         m_stpSecure,
-         m_stpZone};
+      BarStatus.Dock = DockStyle.Bottom;
+      BarStatus.BackColor = System.Drawing.SystemColors.Control;
+      BarStatus.Location = new System.Drawing.Point(0, 297);
+      BarStatus.Size = new System.Drawing.Size(392, 20);
+      BarStatus.TabIndex = 0;
+      BarStatus.ShowPanels = true;
+      BarStatus.PanelClick += new StatusBarPanelClickEventHandler(barStatus_PanelClick);
+      BarStatus.DrawItem += new StatusBarDrawItemEventHandler(barStatus_DrawItem);
+      BarStatus.Panels.Add(StatusMessages);
+      BarStatus.Panels.Add(StatusProgress);
+      BarStatus.Panels.Add(StatusOffline);
+      BarStatus.Panels.Add(StatusSecure);
+      BarStatus.Panels.Add(StatusZone);
             
-      m_axWebBrowser.Size = new System.Drawing.Size(392, 296);
-      m_axWebBrowser.TabIndex = 1;
-      //m_axWebBrowser.Anchor = System.WinForms.AnchorStyles.All;
-      m_axWebBrowser.Dock = DockStyle.Fill;
-      m_axWebBrowser.StatusTextChange += new DWebBrowserEvents2_StatusTextChangeEventHandler(m_axWebBrowser_StatusTextChange);
-      m_axWebBrowser.ProgressChange += new DWebBrowserEvents2_ProgressChangeEventHandler(m_axWebBrowser_ProgressChange);
-      m_axWebBrowser.PropertyChange += new DWebBrowserEvents2_PropertyChangeEventHandler(m_axWebBrowser_PropertyChange);
-      m_axWebBrowser.WindowSetTop += new DWebBrowserEvents2_WindowSetTopEventHandler(m_axWebBrowser_WindowSetTop);
-      m_axWebBrowser.WindowClosing += new DWebBrowserEvents2_WindowClosingEventHandler(m_axWebBrowser_WindowClosing);
-      m_axWebBrowser.NavigateComplete2 += new DWebBrowserEvents2_NavigateComplete2EventHandler(m_axWebBrowser_NavigateComplete2);
-      m_axWebBrowser.OnStatusBar += new DWebBrowserEvents2_OnStatusBarEventHandler(m_axWebBrowser_OnStatusBar);
-      m_axWebBrowser.WindowSetLeft += new DWebBrowserEvents2_WindowSetLeftEventHandler(m_axWebBrowser_WindowSetLeft);
-      m_axWebBrowser.DownloadBegin += new EventHandler(m_axWebBrowser_DownloadBegin);
-      m_axWebBrowser.CommandStateChange += new DWebBrowserEvents2_CommandStateChangeEventHandler(m_axWebBrowser_CommandStateChange);
-      m_axWebBrowser.WindowSetHeight += new DWebBrowserEvents2_WindowSetHeightEventHandler(m_axWebBrowser_WindowSetHeight);
-      m_axWebBrowser.WindowSetResizable += new DWebBrowserEvents2_WindowSetResizableEventHandler(m_axWebBrowser_WindowSetResizable);
-      m_axWebBrowser.SetSecureLockIcon += new DWebBrowserEvents2_SetSecureLockIconEventHandler(m_axWebBrowser_SetSecureLockIcon);
-      m_axWebBrowser.TitleChange += new DWebBrowserEvents2_TitleChangeEventHandler(m_axWebBrowser_TitleChange);
-      m_axWebBrowser.BeforeNavigate2 += new DWebBrowserEvents2_BeforeNavigate2EventHandler(m_axWebBrowser_BeforeNavigate2);
-      m_axWebBrowser.OnTheaterMode += new DWebBrowserEvents2_OnTheaterModeEventHandler(m_axWebBrowser_OnTheaterMode);
-      m_axWebBrowser.WindowSetWidth += new DWebBrowserEvents2_WindowSetWidthEventHandler(m_axWebBrowser_WindowSetWidth);
-      m_axWebBrowser.OnFullScreen += new DWebBrowserEvents2_OnFullScreenEventHandler(m_axWebBrowser_OnFullScreen);
-      m_axWebBrowser.OnQuit += new EventHandler(m_axWebBrowser_OnQuit);
-      m_axWebBrowser.DownloadComplete += new EventHandler(m_axWebBrowser_DownloadComplete);
-      m_axWebBrowser.ClientToHostWindow += new DWebBrowserEvents2_ClientToHostWindowEventHandler(m_axWebBrowser_ClientToHostWindow);
-      m_axWebBrowser.OnToolBar += new DWebBrowserEvents2_OnToolBarEventHandler(m_axWebBrowser_OnToolBar);
-      m_axWebBrowser.OnVisible += new DWebBrowserEvents2_OnVisibleEventHandler(m_axWebBrowser_OnVisible);
-      m_axWebBrowser.FileDownload += new DWebBrowserEvents2_FileDownloadEventHandler(m_axWebBrowser_FileDownload);
-      m_axWebBrowser.NewWindow2 += new DWebBrowserEvents2_NewWindow2EventHandler(m_axWebBrowser_NewWindow2);
-      m_axWebBrowser.OnMenuBar += new DWebBrowserEvents2_OnMenuBarEventHandler(m_axWebBrowser_OnMenuBar);
-      m_axWebBrowser.DocumentComplete += new DWebBrowserEvents2_DocumentCompleteEventHandler(m_axWebBrowser_DocumentComplete);
-           
-      MenuItem miFile = m_mnuMain.MenuItems.Add(m_Resources.GetString("MenuFile"));
+      AxWebBrowser.Size = new System.Drawing.Size(392, 296);
+      AxWebBrowser.TabIndex = 1;
+      //AxWebBrowser.Anchor = AnchorStyles.All;
+      AxWebBrowser.Dock = DockStyle.Fill;
+      AxWebBrowser.StatusTextChange += new DWebBrowserEvents2_StatusTextChangeEventHandler(AxWebBrowser_StatusTextChange);
+      //AxWebBrowser.ProgressChange += new DWebBrowserEvents2_ProgressChangeEventHandler(AxWebBrowser_ProgressChange);
+      //AxWebBrowser.PropertyChange += new DWebBrowserEvents2_PropertyChangeEventHandler(AxWebBrowser_PropertyChange);
+      //AxWebBrowser.WindowSetTop += new DWebBrowserEvents2_WindowSetTopEventHandler(AxWebBrowser_WindowSetTop);
+      //AxWebBrowser.WindowClosing += new DWebBrowserEvents2_WindowClosingEventHandler(AxWebBrowser_WindowClosing);
+      //AxWebBrowser.NavigateComplete2 += new DWebBrowserEvents2_NavigateComplete2EventHandler(AxWebBrowser_NavigateComplete2);
+      //AxWebBrowser.OnStatusBar += new DWebBrowserEvents2_OnStatusBarEventHandler(AxWebBrowser_OnStatusBar);
+      //AxWebBrowser.WindowSetLeft += new DWebBrowserEvents2_WindowSetLeftEventHandler(AxWebBrowser_WindowSetLeft);
+      //AxWebBrowser.DownloadBegin += new EventHandler(AxWebBrowser_DownloadBegin);
+      AxWebBrowser.CommandStateChange += new DWebBrowserEvents2_CommandStateChangeEventHandler(AxWebBrowser_CommandStateChange);
+      //AxWebBrowser.WindowSetHeight += new DWebBrowserEvents2_WindowSetHeightEventHandler(AxWebBrowser_WindowSetHeight);
+      //AxWebBrowser.WindowSetResizable += new DWebBrowserEvents2_WindowSetResizableEventHandler(AxWebBrowser_WindowSetResizable);
+      //AxWebBrowser.SetSecureLockIcon += new DWebBrowserEvents2_SetSecureLockIconEventHandler(AxWebBrowser_SetSecureLockIcon);
+      AxWebBrowser.TitleChange += new DWebBrowserEvents2_TitleChangeEventHandler(AxWebBrowser_TitleChange);
+      //AxWebBrowser.BeforeNavigate2 += new DWebBrowserEvents2_BeforeNavigate2EventHandler(AxWebBrowser_BeforeNavigate2);
+      //AxWebBrowser.OnTheaterMode += new DWebBrowserEvents2_OnTheaterModeEventHandler(AxWebBrowser_OnTheaterMode);
+      //AxWebBrowser.WindowSetWidth += new DWebBrowserEvents2_WindowSetWidthEventHandler(AxWebBrowser_WindowSetWidth);
+      //AxWebBrowser.OnFullScreen += new DWebBrowserEvents2_OnFullScreenEventHandler(AxWebBrowser_OnFullScreen);
+      //AxWebBrowser.OnQuit += new EventHandler(AxWebBrowser_OnQuit);
+      //AxWebBrowser.DownloadComplete += new EventHandler(AxWebBrowser_DownloadComplete);
+      //AxWebBrowser.ClientToHostWindow += new DWebBrowserEvents2_ClientToHostWindowEventHandler(AxWebBrowser_ClientToHostWindow);
+      //AxWebBrowser.OnToolBar += new DWebBrowserEvents2_OnToolBarEventHandler(AxWebBrowser_OnToolBar);
+      //AxWebBrowser.OnVisible += new DWebBrowserEvents2_OnVisibleEventHandler(AxWebBrowser_OnVisible);
+      //AxWebBrowser.FileDownload += new DWebBrowserEvents2_FileDownloadEventHandler(AxWebBrowser_FileDownload);
+      //AxWebBrowser.NewWindow2 += new DWebBrowserEvents2_NewWindow2EventHandler(AxWebBrowser_NewWindow2);
+      //AxWebBrowser.OnMenuBar += new DWebBrowserEvents2_OnMenuBarEventHandler(AxWebBrowser_OnMenuBar);
+      AxWebBrowser.DocumentComplete += new DWebBrowserEvents2_DocumentCompleteEventHandler(AxWebBrowser_DocumentComplete);
+      
+      MenuItem miFile = MenuMain.MenuItems.Add(Resourcer.GetString("MenuFile"));
       miFile.Popup += new EventHandler(mnuFile_Popup);
-        MenuItem miFileNew = miFile.MenuItems.Add(m_Resources.GetString("MenuFileNew"));
-          miFileNew.MenuItems.Add(m_Resources.GetString("MenuFileNewWindow"));
+        MenuItem miFileNew = miFile.MenuItems.Add(Resourcer.GetString("MenuFileNew"));
+          miFileNew.MenuItems.Add(Resourcer.GetString("MenuFileNewWindow"));
           //miFileNew.MenuItems.Add("-");
-          //miFileNew.MenuItems.Add(m_Resources.GetString("MenuFileNewMessage"));
-        miFile.MenuItems.Add(new MenuItem(m_Resources.GetString("MenuFileOpen"),
+          //miFileNew.MenuItems.Add(Resourcer.GetString("MenuFileNewMessage"));
+        miFile.MenuItems.Add(new MenuItem(Resourcer.GetString("MenuFileOpen"),
           new EventHandler(mnuFileOpen_Click), Shortcut.CtrlO));
-        miFile.MenuItems.Add(m_Resources.GetString("MenuFileEdit"),
+        miFile.MenuItems.Add(Resourcer.GetString("MenuFileEdit"),
           new EventHandler(mnuFileEdit_Click));
-        miFile.MenuItems.Add(new MenuItem(m_Resources.GetString("MenuFileSave"),
+        miFile.MenuItems.Add(new MenuItem(Resourcer.GetString("MenuFileSave"),
           new EventHandler(mnuFileSave_Click), Shortcut.CtrlS));
-        miFile.MenuItems.Add(m_Resources.GetString("MenuFileSaveAs"),
+        miFile.MenuItems.Add(Resourcer.GetString("MenuFileSaveAs"),
           new EventHandler(mnuFileSaveAs_Click));
         miFile.MenuItems.Add("-");
-        miFile.MenuItems.Add(m_Resources.GetString("MenuFilePageSetup"),
+        miFile.MenuItems.Add(Resourcer.GetString("MenuFilePageSetup"),
           new EventHandler(mnuFilePageSetup_Click));
-        miFile.MenuItems.Add(new MenuItem(m_Resources.GetString("MenuFilePrint"),
+        miFile.MenuItems.Add(new MenuItem(Resourcer.GetString("MenuFilePrint"),
           new EventHandler(mnuFilePrint_Click), Shortcut.CtrlP));
-        miFile.MenuItems.Add(m_Resources.GetString("MenuFilePrintPreview"),
+        miFile.MenuItems.Add(Resourcer.GetString("MenuFilePrintPreview"),
           new EventHandler(mnuFilePrintPreview_Click));
         miFile.MenuItems.Add("-");
-        MenuItem miFileSend = miFile.MenuItems.Add(m_Resources.GetString("MenuFileSend"));
-          miFileSend.MenuItems.Add(m_Resources.GetString("MenuFileSendPage"));
-          miFileSend.MenuItems.Add(m_Resources.GetString("MenuFileSendLink"));
-          miFileSend.MenuItems.Add(m_Resources.GetString("MenuFileSendShortcut"));
-        miFile.MenuItems.Add(m_Resources.GetString("MenuFileImportExport"),
+        MenuItem miFileSend = miFile.MenuItems.Add(Resourcer.GetString("MenuFileSend"));
+          miFileSend.MenuItems.Add(Resourcer.GetString("MenuFileSendPage"));
+          miFileSend.MenuItems.Add(Resourcer.GetString("MenuFileSendLink"));
+          miFileSend.MenuItems.Add(Resourcer.GetString("MenuFileSendShortcut"));
+        miFile.MenuItems.Add(Resourcer.GetString("MenuFileImportExport"),
           new EventHandler(mnuFileImportExport_Click));
         miFile.MenuItems.Add("-");
-        miFile.MenuItems.Add(m_Resources.GetString("MenuFileProperties"),
+        miFile.MenuItems.Add(Resourcer.GetString("MenuFileProperties"),
           new EventHandler(mnuFileProperties_Click));
-        miFile.MenuItems.Add(m_Resources.GetString("MenuFileWorkOffline"),
+        miFile.MenuItems.Add(Resourcer.GetString("MenuFileWorkOffline"),
           new EventHandler(mnuFileWorkOffline_Click));
-        miFile.MenuItems.Add(m_Resources.GetString("MenuFileClose"),
+        miFile.MenuItems.Add(Resourcer.GetString("MenuFileClose"),
           new EventHandler(mnuFileClose_Click));
-      MenuItem miEdit = m_mnuMain.MenuItems.Add(m_Resources.GetString("MenuEdit"));
+      MenuItem miEdit = MenuMain.MenuItems.Add(Resourcer.GetString("MenuEdit"));
       miEdit.Popup += new EventHandler(mnuEdit_Popup);
-        miEdit.MenuItems.Add(new MenuItem(m_Resources.GetString("MenuEditCut"),
+        miEdit.MenuItems.Add(new MenuItem(Resourcer.GetString("MenuEditCut"),
           new EventHandler(mnuEditCut_Click), Shortcut.CtrlX));
-        miEdit.MenuItems.Add(new MenuItem(m_Resources.GetString("MenuEditCopy"),
+        miEdit.MenuItems.Add(new MenuItem(Resourcer.GetString("MenuEditCopy"),
           new EventHandler(mnuEditCopy_Click), Shortcut.CtrlC));
-        miEdit.MenuItems.Add(new MenuItem(m_Resources.GetString("MenuEditPaste"),
+        miEdit.MenuItems.Add(new MenuItem(Resourcer.GetString("MenuEditPaste"),
           new EventHandler(mnuEditPaste_Click), Shortcut.CtrlV));
         miEdit.MenuItems.Add("-");
-        miEdit.MenuItems.Add(new MenuItem(m_Resources.GetString("MenuEditSelectAll"),
+        miEdit.MenuItems.Add(new MenuItem(Resourcer.GetString("MenuEditSelectAll"),
           new EventHandler(mnuEditSelectAll_Click), Shortcut.CtrlA));
         //miEdit.MenuItems.Add("-");
-        //miEdit.MenuItems.Add(new MenuItem(m_Resources.GetString("MenuEditFind"),
+        //miEdit.MenuItems.Add(new MenuItem(Resourcer.GetString("MenuEditFind"),
           //new EventHandler(mnuEditFind_Click)));
-      MenuItem miView = m_mnuMain.MenuItems.Add(m_Resources.GetString("MenuView"));
+      MenuItem miView = MenuMain.MenuItems.Add(Resourcer.GetString("MenuView"));
       miView.Popup += new EventHandler(mnuView_Popup);
-        miView.MenuItems.Add(m_Resources.GetString("MenuViewToolbars"));
-        miView.MenuItems.Add(m_Resources.GetString("MenuViewStatusBar"),
+        miView.MenuItems.Add(Resourcer.GetString("MenuViewToolbars"));
+        miView.MenuItems.Add(Resourcer.GetString("MenuViewStatusBar"),
           new EventHandler(mnuViewStatusBar_Click));
         miView.MenuItems.Add("-");
-        MenuItem miViewGoTo = miView.MenuItems.Add(m_Resources.GetString("MenuViewGoTo"));
-          MenuItem miViewGoToBack = miViewGoTo.MenuItems.Add(m_Resources.GetString("MenuViewGoToBack"),
+        MenuItem miViewGoTo = miView.MenuItems.Add(Resourcer.GetString("MenuViewGoTo"));
+          MenuItem miViewGoToBack = miViewGoTo.MenuItems.Add(Resourcer.GetString("MenuViewGoToBack"),
             new EventHandler(mnuViewGoToBack_Click));
             miViewGoToBack.Enabled = false;
-          MenuItem miViewGoToForward = miViewGoTo.MenuItems.Add(m_Resources.GetString("MenuViewGoToForward"),
+          MenuItem miViewGoToForward = miViewGoTo.MenuItems.Add(Resourcer.GetString("MenuViewGoToForward"),
             new EventHandler(mnuViewGoToForward_Click));
             miViewGoToForward.Enabled = false;
           miViewGoTo.MenuItems.Add("-");
-          miViewGoTo.MenuItems.Add(m_Resources.GetString("MenuViewGoToHomePage"),
+          miViewGoTo.MenuItems.Add(Resourcer.GetString("MenuViewGoToHomePage"),
             new EventHandler(mnuViewGoToHomePage_Click));
-          miViewGoTo.MenuItems.Add(m_Resources.GetString("MenuViewGoToSearchPage"),
+          miViewGoTo.MenuItems.Add(Resourcer.GetString("MenuViewGoToSearchPage"),
             new EventHandler(mnuViewGoToSearchPage_Click));
-        miView.MenuItems.Add(m_Resources.GetString("MenuViewStop"),
+        miView.MenuItems.Add(Resourcer.GetString("MenuViewStop"),
           new EventHandler(mnuViewStop_Click));
-        miView.MenuItems.Add(m_Resources.GetString("MenuViewRefresh"),
+        miView.MenuItems.Add(Resourcer.GetString("MenuViewRefresh"),
           new EventHandler(mnuViewRefresh_Click));
         miView.MenuItems.Add("-");
-        MenuItem miViewTextSize = miView.MenuItems.Add(m_Resources.GetString("MenuViewTextSize"));
+        MenuItem miViewTextSize = miView.MenuItems.Add(Resourcer.GetString("MenuViewTextSize"));
         miViewTextSize.Popup += new EventHandler(mnuViewTextSize_Popup);
-          miViewTextSize.MenuItems.Add(m_Resources.GetString("MenuViewTextSizeLargest"),
+          miViewTextSize.MenuItems.Add(Resourcer.GetString("MenuViewTextSizeLargest"),
             new EventHandler(mnuViewTextSizeLargest_Click));
-          miViewTextSize.MenuItems.Add(m_Resources.GetString("MenuViewTextSizeLarger"),
+          miViewTextSize.MenuItems.Add(Resourcer.GetString("MenuViewTextSizeLarger"),
             new EventHandler(mnuViewTextSizeLarger_Click));
-          miViewTextSize.MenuItems.Add(m_Resources.GetString("MenuViewTextSizeMedium"),
+          miViewTextSize.MenuItems.Add(Resourcer.GetString("MenuViewTextSizeMedium"),
             new EventHandler(mnuViewTextSizeMedium_Click));
-          miViewTextSize.MenuItems.Add(m_Resources.GetString("MenuViewTextSizeSmaller"),
+          miViewTextSize.MenuItems.Add(Resourcer.GetString("MenuViewTextSizeSmaller"),
             new EventHandler(mnuViewTextSizeSmaller_Click));
-          miViewTextSize.MenuItems.Add(m_Resources.GetString("MenuViewTextSizeSmallest"),
+          miViewTextSize.MenuItems.Add(Resourcer.GetString("MenuViewTextSizeSmallest"),
             new EventHandler(mnuViewTextSizeSmallest_Click));
         foreach(MenuItem mi in miViewTextSize.MenuItems)
           mi.RadioCheck = true;
         miView.MenuItems.Add("-");
-        miView.MenuItems.Add(m_Resources.GetString("MenuViewSource"));
-        miView.MenuItems.Add(m_Resources.GetString("MenuViewFullScreen"),
+        miView.MenuItems.Add(Resourcer.GetString("MenuViewSource"));
+        miView.MenuItems.Add(Resourcer.GetString("MenuViewFullScreen"),
           new EventHandler(mnuViewFullScreen_Click));
-      MenuItem miFavs = m_mnuMain.MenuItems.Add(m_Resources.GetString("MenuFavourites"));
+      MenuItem miFavs = MenuMain.MenuItems.Add(Resourcer.GetString("MenuFavourites"));
       miFavs.Popup += new EventHandler(mnuFavourites_Popup);
-        miFavs.MenuItems.Add(m_Resources.GetString("MenuFavouritesAdd"),
+        miFavs.MenuItems.Add(Resourcer.GetString("MenuFavouritesAdd"),
           new EventHandler(mnuFavouritesAdd_Click));
-        miFavs.MenuItems.Add(m_Resources.GetString("MenuFavouritesOrganise"),
+        miFavs.MenuItems.Add(Resourcer.GetString("MenuFavouritesOrganise"),
           new EventHandler(mnuFavouritesOrganise_Click));
-      MenuItem miTools = m_mnuMain.MenuItems.Add(m_Resources.GetString("MenuTools"));
-        miTools.MenuItems.Add(m_Resources.GetString("MenuToolsInternetOptions"));
-      MenuItem miHelp = m_mnuMain.MenuItems.Add(m_Resources.GetString("MenuHelp"));
-        miHelp.MenuItems.Add(m_Resources.GetString("MenuHelpAbout"),
+      MenuItem miTools = MenuMain.MenuItems.Add(Resourcer.GetString("MenuTools"));
+        miTools.MenuItems.Add(Resourcer.GetString("MenuToolsInternetOptions"));
+      MenuItem miHelp = MenuMain.MenuItems.Add(Resourcer.GetString("MenuHelp"));
+        miHelp.MenuItems.Add(Resourcer.GetString("MenuHelpAbout"),
           new EventHandler(mnuHelpAbout_Click));
       
-      m_tbtStop.ImageIndex = 2;
-      m_tbtStop.ToolTipText = "Stop";
+      TbStop.ImageIndex = 2;
+      TbStop.ToolTipText = "Stop";
       
-      m_imlToolbarCold.Images.AddStrip((Image)m_Resources.GetObject("ImagesToolbarCold"));
-      m_imlToolbarCold.ImageSize = new System.Drawing.Size(20, 20);
-      m_imlToolbarCold.ColorDepth = System.WinForms.ColorDepth.Depth8Bit;
-      m_imlToolbarCold.TransparentColor = System.Drawing.Color.Fuchsia;
+      TbSeperator3.Style = ToolBarButtonStyle.Separator;
       
-      m_Seperator3.Style = System.WinForms.ToolBarButtonStyle.Separator;
+      TbSeperator2.Style = ToolBarButtonStyle.Separator;
       
-      m_tbtSeperator2.Style = System.WinForms.ToolBarButtonStyle.Separator;
+      TbSeperator1.Style = ToolBarButtonStyle.Separator;
       
-      m_tbtSeperator1.Style = System.WinForms.ToolBarButtonStyle.Separator;
+      TbPrint.ImageIndex = 7;
+      TbPrint.ToolTipText = "Print";
       
-      m_tbtPrint.ImageIndex = 7;
-      m_tbtPrint.ToolTipText = "Print";
+      TbFavorites.ImageIndex = 6;
+      TbFavorites.ToolTipText = "Favourites";
       
-      m_tbtFavourites.ImageIndex = 6;
-      m_tbtFavourites.ToolTipText = "Favourites";
+      TbBack.ImageIndex = 0;
+      TbBack.ToolTipText = "Back";
+      TbBack.Enabled = false;
+      TbBack.Style = ToolBarButtonStyle.DropDownButton;
       
-      m_tbtBack.ImageIndex = 0;
-      m_tbtBack.ToolTipText = "Back";
-      m_tbtBack.Enabled = false;
-      m_tbtBack.Style = System.WinForms.ToolBarButtonStyle.DropDownButton;
+      TbForward.ImageIndex = 1;
+      TbForward.ToolTipText = "Forward";
+      TbForward.Enabled = false;
+      TbForward.Style = ToolBarButtonStyle.DropDownButton;
       
-      m_tbtForward.ImageIndex = 1;
-      m_tbtForward.ToolTipText = "Forward";
-      m_tbtForward.Enabled = false;
-      m_tbtForward.Style = System.WinForms.ToolBarButtonStyle.DropDownButton;
+      TbHome.ImageIndex = 4;
+      TbHome.ToolTipText = "Home";
       
-      m_tbtHome.ImageIndex = 4;
-      m_tbtHome.ToolTipText = "Home";
+      ImagesToolbar.ImageSize = new System.Drawing.Size(20, 20);
+      ImagesToolbar.ColorDepth = ColorDepth.Depth24Bit;
+      ImagesToolbar.TransparentColor = System.Drawing.Color.Fuchsia;
+      ImagesToolbar.Images.AddStrip((Image)Resourcer.GetObject("ImagesToolbar"));
       
-      m_imlToolbarHot.Images.AddStrip((Image)m_Resources.GetObject("ImagesToolbarHot"));
-      m_imlToolbarHot.ImageSize = new System.Drawing.Size(20, 20);
-      m_imlToolbarHot.ColorDepth = System.WinForms.ColorDepth.Depth8Bit;
-      m_imlToolbarHot.TransparentColor = System.Drawing.Color.Fuchsia;
+      TbEdit.ImageIndex = 15;
+      TbEdit.ToolTipText = "Edit";
       
-      m_tbtEdit.ImageIndex = 9;
-      m_tbtEdit.ToolTipText = "Edit";
+      TbHistory.ImageIndex = 12;
+      TbHistory.ToolTipText = "History";
       
-      m_tbtHistory.ImageIndex = 12;
-      m_tbtHistory.ToolTipText = "History";
+      TbSearch.ImageIndex = 5;
+      TbSearch.ToolTipText = "Search";
       
-      m_tbtSearch.ImageIndex = 5;
-      m_tbtSearch.ToolTipText = "Search";
+      TbRefresh.ImageIndex = 3;
+      TbRefresh.ToolTipText = "Refresh";
       
-      m_tbtRefresh.ImageIndex = 3;
-      m_tbtRefresh.ToolTipText = "Refresh";
+      TbMail.ImageIndex = 13;
+      TbMail.ToolTipText = "Mail";
       
-      m_tbtMail.ImageIndex = 13;
-      m_tbtMail.ToolTipText = "Mail";
+      BarStandardToolbar.ImageList = ImagesToolbar;
+      BarStandardToolbar.Size = new System.Drawing.Size(384, 30);
+      BarStandardToolbar.Wrappable = false;
+      //BarStandardToolbar.ButtonSize = new System.Drawing.Size(20, 20);
+      BarStandardToolbar.DropDownArrows = true;
+      BarStandardToolbar.Appearance = ToolBarAppearance.Flat;
+      BarStandardToolbar.TabIndex = 0;
+      BarStandardToolbar.ShowToolTips = true;
+      BarStandardToolbar.ButtonClick += new ToolBarButtonClickEventHandler(tbStandard_ButtonClick);
+      BarStandardToolbar.ButtonDropDown += new ToolBarButtonClickEventHandler(tbStandard_ButtonDropDown);
+      BarStandardToolbar.Buttons.AddRange(new ToolBarButton[]
+       {TbBack,
+        TbForward,
+        TbStop,
+        TbRefresh,
+        TbHome,
+        TbSeperator1,
+        TbSearch,
+        TbFavorites,
+        TbHistory,
+        TbSeperator2,
+        TbMail,
+        TbPrint,
+        TbSeperator3,
+        TbEdit} );
       
-      //m_barStandardTB.ImageList = m_imlToolbarCold;
-      //m_barStandardTB.HotImageList = m_imlToolbarHot;
-      m_barStandardTB.ImageList = m_imlToolbarHot;
-      m_barStandardTB.Size = new System.Drawing.Size(384, 30);
-      m_barStandardTB.Wrappable = false;
-      //m_barStandardTB.ButtonSize = new System.Drawing.Size(20, 20);
-      m_barStandardTB.DropDownArrows = true;
-      m_barStandardTB.Appearance = System.WinForms.ToolBarAppearance.Flat;
-      m_barStandardTB.TabIndex = 0;
-      m_barStandardTB.ShowToolTips = true;
-      m_barStandardTB.ButtonClick += new System.WinForms.ToolBarButtonClickEventHandler(tbStandard_ButtonClick);
-      m_barStandardTB.ButtonDropDown += new System.WinForms.ToolBarButtonClickEventHandler(tbStandard_ButtonDropDown);
-      m_barStandardTB.Buttons.All = new System.WinForms.ToolBarButton[] {m_tbtBack,
-        m_tbtForward,
-        m_tbtStop,
-        m_tbtRefresh,
-        m_tbtHome,
-        m_tbtSeperator1,
-        m_tbtSearch,
-        m_tbtFavourites,
-        m_tbtHistory,
-        m_tbtSeperator2,
-        m_tbtMail,
-        m_tbtPrint,
-        m_Seperator3,
-        m_tbtEdit};
+      BarAddress.Dock = DockStyle.Top;
+      BarAddress.Size = new System.Drawing.Size(392, 24);
+      BarAddress.TabIndex = 0;
       
-      m_barAddress.Dock = System.WinForms.DockStyle.Top;
-      m_barAddress.Size = new System.Drawing.Size(392, 24);
-      m_barAddress.TabIndex = 0;
+      ButtonGo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      ButtonGo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      ButtonGo.Image = (Image)Resourcer.GetObject("IconGo");
+      ButtonGo.Location = new System.Drawing.Point(348, 0);
+      ButtonGo.FlatStyle = FlatStyle.Popup;
+      ButtonGo.Size = new System.Drawing.Size(40, 21);
+      ButtonGo.TabIndex = 1;
+      ButtonGo.Anchor = AnchorStyles.Right;
+      ButtonGo.Text = "Go";
+      ButtonGo.Click += new System.EventHandler(btnGo_Click);
       
-      m_btnGo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-      m_btnGo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      m_btnGo.Image = (Image)m_Resources.GetObject("IconGo");
-      m_btnGo.Location = new System.Drawing.Point(348, 0);
-      m_btnGo.FlatStyle = System.WinForms.FlatStyle.Popup;
-      m_btnGo.Size = new System.Drawing.Size(40, 21);
-      m_btnGo.TabIndex = 1;
-      m_btnGo.Anchor = System.WinForms.AnchorStyles.Right;
-      m_btnGo.Text = "Go";
-      m_btnGo.Click += new System.EventHandler(btnGo_Click);
+      ComboAddress.Location = new System.Drawing.Point(64, 0);
+      ComboAddress.Size = new System.Drawing.Size(280, 21);
+      ComboAddress.TabIndex = 2;
+      ComboAddress.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+      ComboAddress.SelectionChangeCommitted += new System.EventHandler(cmbAddress_SelectionChangeCommited);
+      ComboAddress.KeyPress += new KeyPressEventHandler(cmbAddress_KeyPress);
+      ComboAddress.SelectedIndexChanged += new System.EventHandler(cmbAddress_SelectedIndexChanged);
       
-      m_cmbAddress.Location = new System.Drawing.Point(64, 0);
-      m_cmbAddress.Size = new System.Drawing.Size(280, 21);
-      m_cmbAddress.TabIndex = 2;
-      m_cmbAddress.Anchor = System.WinForms.AnchorStyles.LeftRight;
-      m_cmbAddress.SelectionChangeCommitted += new System.EventHandler(cmbAddress_SelectionChangeCommited);
-      m_cmbAddress.KeyPress += new KeyPressEventHandler(cmbAddress_KeyPress);
-      m_cmbAddress.SelectedIndexChanged += new System.EventHandler(cmbAddress_SelectedIndexChanged);
+      LabelAddress.Location = new System.Drawing.Point(4, 4);
+      LabelAddress.Text = "Address: ";
+      LabelAddress.Size = new System.Drawing.Size(46, 13);
+      LabelAddress.AutoSize = true;
+      LabelAddress.TabIndex = 0;
       
-      m_lblAddress.Location = new System.Drawing.Point(4, 4);
-      m_lblAddress.Text = "Address: ";
-      m_lblAddress.Size = new System.Drawing.Size(46, 13);
-      m_lblAddress.AutoSize = true;
-      m_lblAddress.TabIndex = 0;
+      BarAddress.Controls.Add(ComboAddress);
+      BarAddress.Controls.Add(ButtonGo);
+      BarAddress.Controls.Add(LabelAddress);
       
-      m_barAddress.Controls.Add(m_cmbAddress);
-      m_barAddress.Controls.Add(m_btnGo);
-      m_barAddress.Controls.Add(m_lblAddress);
-      
-      this.Text = m_Resources.GetString("AppTitle");
+      this.Text = Resourcer.GetString("AppTitle");
       this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-      this.Menu = m_mnuMain;
+      this.Menu = MenuMain;
       this.ClientSize = new System.Drawing.Size(392, 317);
-      this.Icon = (System.Drawing.Icon)m_Resources.GetObject("AppIcon");
+      this.Icon = (System.Drawing.Icon)Resourcer.GetObject("AppIcon");
       
-      this.Controls.Add(m_barStandardTB);
-      this.Controls.Add(m_barAddress);
-      this.Controls.Add(m_barStatus);
-      this.Controls.Add(m_axWebBrowser);
+      this.Controls.Add(AxWebBrowser);
+      this.Controls.Add(BarStandardToolbar);
+      this.Controls.Add(BarAddress);
+      this.Controls.Add(BarStatus);
       
-      m_stpProgress.EndInit();
-      m_stpOffline.EndInit();
-      m_axWebBrowser.EndInit();
-      m_stpMessages.EndInit();
-      m_stpZone.EndInit();
-      m_stpSecure.EndInit();
-      
-      //Add typed URLs to Address combo
+      // Add typed URLs to Address combobox
       String sKey = "Software\\Microsoft\\Internet Explorer\\TypedURLs";
       RegistryKey kURLs = Registry.CurrentUser.OpenSubKey(sKey);
       String sURL;
@@ -408,20 +378,26 @@ namespace Techinox.WebBrowser
         sURL = (String)kURLs.GetValue(sValName);
         if((object)sURL == null)
           break;
-        m_cmbAddress.Items.Add(sURL);
+        ComboAddress.Items.Add(sURL);
         nURL++;
       }
       
+      AxWebBrowser.EndInit();
+      
+      AxWebBrowser.RegisterAsBrowser = true;
+      AxWebBrowser.RegisterAsDropTarget = true;
+      AxWebBrowser.Silent = false;
+      
       //Show home page
-      m_axWebBrowser.GoHome();
+      AxWebBrowser.GoHome();
       Object o = null;
       
       //Update toolbar
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_UPDATECOMMANDS,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_UPDATECOMMANDS,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_DONTPROMPTUSER,
         ref o, ref o);
       
-      m_cmbAddress.Focus();
+      ComboAddress.Focus();
     }
 
     protected void barStatus_DrawItem(object sender, StatusBarDrawItemEventArgs sbdevent)
@@ -433,171 +409,178 @@ namespace Techinox.WebBrowser
       
     }
 
-    protected void m_axWebBrowser_WindowSetWidth(object sender, DWebBrowserEvents2_WindowSetWidthEvent e)
+    protected void AxWebBrowser_WindowSetWidth(object sender, DWebBrowserEvents2_WindowSetWidthEvent e)
     {
       
     }
-    protected void m_axWebBrowser_WindowSetTop(object sender, DWebBrowserEvents2_WindowSetTopEvent e)
+    protected void AxWebBrowser_WindowSetTop(object sender, DWebBrowserEvents2_WindowSetTopEvent e)
     {
       
     }
-    protected void m_axWebBrowser_WindowSetResizable(object sender, DWebBrowserEvents2_WindowSetResizableEvent e)
+    protected void AxWebBrowser_WindowSetResizable(object sender, DWebBrowserEvents2_WindowSetResizableEvent e)
     {
       
     }
-    protected void m_axWebBrowser_WindowSetLeft(object sender, DWebBrowserEvents2_WindowSetLeftEvent e)
+    protected void AxWebBrowser_WindowSetLeft(object sender, DWebBrowserEvents2_WindowSetLeftEvent e)
     {
       
     }
-    protected void m_axWebBrowser_WindowSetHeight(object sender, DWebBrowserEvents2_WindowSetHeightEvent e)
+    protected void AxWebBrowser_WindowSetHeight(object sender, DWebBrowserEvents2_WindowSetHeightEvent e)
     {
       
     }
-    protected void m_axWebBrowser_WindowClosing(object sender, DWebBrowserEvents2_WindowClosingEvent e)
+    protected void AxWebBrowser_WindowClosing(object sender, DWebBrowserEvents2_WindowClosingEvent e)
     {
       
     }
-    protected void m_axWebBrowser_TitleChange(object sender, DWebBrowserEvents2_TitleChangeEvent e)
+    protected void AxWebBrowser_TitleChange(object sender, DWebBrowserEvents2_TitleChangeEvent e)
     {
-      this.Text = e.p_text + " - " + m_Resources.GetString("AppTitle");
+      this.Text = e.text + " - " + Resourcer.GetString("AppTitle");
     }
-    protected void m_axWebBrowser_StatusTextChange(object sender, DWebBrowserEvents2_StatusTextChangeEvent e)
+    protected void AxWebBrowser_StatusTextChange(object sender, DWebBrowserEvents2_StatusTextChangeEvent e)
     {
-      m_stpMessages.Text = e.p_text;
+      StatusMessages.Text = e.text;
     }
-    protected void m_axWebBrowser_SetSecureLockIcon(object sender, DWebBrowserEvents2_SetSecureLockIconEvent e)
+    protected void AxWebBrowser_SetSecureLockIcon(object sender, DWebBrowserEvents2_SetSecureLockIconEvent e)
     {
       
     }
-    protected void m_axWebBrowser_PropertyChange(object sender, DWebBrowserEvents2_PropertyChangeEvent e)
+    protected void AxWebBrowser_PropertyChange(object sender, DWebBrowserEvents2_PropertyChangeEvent e)
     {
       
     }
-    protected void m_axWebBrowser_ProgressChange(object sender, DWebBrowserEvents2_ProgressChangeEvent e)
+    protected void AxWebBrowser_ProgressChange(object sender, DWebBrowserEvents2_ProgressChangeEvent e)
     {
       
     }
-    protected void m_axWebBrowser_OnVisible(object sender, DWebBrowserEvents2_OnVisibleEvent e)
+    protected void AxWebBrowser_OnVisible(object sender, DWebBrowserEvents2_OnVisibleEvent e)
     {
       
     }
-    protected void m_axWebBrowser_OnToolBar(object sender, DWebBrowserEvents2_OnToolBarEvent e)
+    protected void AxWebBrowser_OnToolBar(object sender, DWebBrowserEvents2_OnToolBarEvent e)
     {
       
     }
-    protected void m_axWebBrowser_OnTheaterMode(object sender, DWebBrowserEvents2_OnTheaterModeEvent e)
+    protected void AxWebBrowser_OnTheaterMode(object sender, DWebBrowserEvents2_OnTheaterModeEvent e)
     {
       
     }
-    protected void m_axWebBrowser_OnStatusBar(object sender, DWebBrowserEvents2_OnStatusBarEvent e)
+    protected void AxWebBrowser_OnStatusBar(object sender, DWebBrowserEvents2_OnStatusBarEvent e)
     {
       
     }
-    protected void m_axWebBrowser_OnQuit(object sender, EventArgs e)
+    protected void AxWebBrowser_OnQuit(object sender, EventArgs e)
     {
       
     }
-    protected void m_axWebBrowser_OnMenuBar(object sender, DWebBrowserEvents2_OnMenuBarEvent e)
+    protected void AxWebBrowser_OnMenuBar(object sender, DWebBrowserEvents2_OnMenuBarEvent e)
     {
       
     }
-    protected void m_axWebBrowser_OnFullScreen(object sender, DWebBrowserEvents2_OnFullScreenEvent e)
+    protected void AxWebBrowser_OnFullScreen(object sender, DWebBrowserEvents2_OnFullScreenEvent e)
     {
       
     }
-    protected void m_axWebBrowser_NewWindow2(object sender, DWebBrowserEvents2_NewWindow2Event e)
+    protected void AxWebBrowser_NewWindow2(object sender, DWebBrowserEvents2_NewWindow2Event e)
     {
-      e.p_cancel = false;
+      e.cancel = true;
     }
-    protected void m_axWebBrowser_NavigateComplete2(object sender, DWebBrowserEvents2_NavigateComplete2Event e)
+    protected void AxWebBrowser_NavigateComplete2(object sender, DWebBrowserEvents2_NavigateComplete2Event e)
+    {
+      IHTMLDocument4 id4;
+      object boxID4 = AxWebBrowser.Document;
+      id4 = (IHTMLDocument4)boxID4;
+
+      // For testing only...
+
+    }
+    protected void AxWebBrowser_FileDownload(object sender, DWebBrowserEvents2_FileDownloadEvent e)
     {
       
     }
-    protected void m_axWebBrowser_FileDownload(object sender, DWebBrowserEvents2_FileDownloadEvent e)
+    protected void AxWebBrowser_DownloadComplete(object sender, EventArgs e)
     {
       
     }
-    protected void m_axWebBrowser_DownloadComplete(object sender, EventArgs e)
+    protected void AxWebBrowser_DownloadBegin(object sender, EventArgs   e)
     {
       
     }
-    protected void m_axWebBrowser_DownloadBegin(object sender, EventArgs   e)
+    protected void AxWebBrowser_DocumentComplete(object sender, DWebBrowserEvents2_DocumentCompleteEvent e)
     {
-      
-    }
-    protected void m_axWebBrowser_DocumentComplete(object sender, DWebBrowserEvents2_DocumentCompleteEvent e)
-    {
-      String sURL = (String)e.p_uRL;
-      int index = m_cmbAddress.FindStringExact(sURL);
+      String sURL = (String)e.uRL;
+      int index = ComboAddress.FindStringExact(sURL);
       if(index == -1)
       {
-        m_cmbAddress.Items.Add(sURL);
-        m_cmbAddress.SelectedIndex = m_cmbAddress.FindStringExact(sURL);
+        ComboAddress.Items.Add(sURL);
+        ComboAddress.SelectedIndex = ComboAddress.FindStringExact(sURL);
       }
       else
       {
-        m_cmbAddress.SelectedIndex = index;
+        ComboAddress.SelectedIndex = index;
       }
     }
-    protected void m_axWebBrowser_CommandStateChange(object sender, DWebBrowserEvents2_CommandStateChangeEvent e)
+    protected void AxWebBrowser_CommandStateChange(object sender, DWebBrowserEvents2_CommandStateChangeEvent e)
     {
-      if(e.p_command == SHDocVw.CommandStateChangeConstants.CSC_NAVIGATEBACK.ToInt32())
+      if(e.command.Equals(SHDocVw.CommandStateChangeConstants.CSC_NAVIGATEBACK))
       {
-        MenuItem miView = m_mnuMain.MenuItems[2];
+        MenuItem miView = MenuMain.MenuItems[2];
         MenuItem miGoTo = miView.MenuItems[3];
-        miGoTo.MenuItems[0].Enabled = e.p_enable;
-        m_tbtBack.Enabled = e.p_enable;
+        miGoTo.MenuItems[0].Enabled = e.enable;
+        TbBack.Enabled = e.enable;
       }
-      if(e.p_command == SHDocVw.CommandStateChangeConstants.CSC_NAVIGATEFORWARD.ToInt32())
+      if(e.command.Equals(SHDocVw.CommandStateChangeConstants.CSC_NAVIGATEFORWARD))
       {
-        MenuItem miView = m_mnuMain.MenuItems[2];
+        MenuItem miView = MenuMain.MenuItems[2];
         MenuItem miGoTo = miView.MenuItems[3];
-        miGoTo.MenuItems[1].Enabled = e.p_enable;
-        m_tbtForward.Enabled = e.p_enable;
+        miGoTo.MenuItems[1].Enabled = e.enable;
+        TbForward.Enabled = e.enable;
       }
-      if(e.p_command == SHDocVw.CommandStateChangeConstants.CSC_UPDATECOMMANDS.ToInt32())
+      if(e.command.Equals(SHDocVw.CommandStateChangeConstants.CSC_UPDATECOMMANDS))
       {
-        Int32 nEnabledTest = SHDocVw.OLECMDF.OLECMDF_SUPPORTED.ToInt32()
-          + SHDocVw.OLECMDF.OLECMDF_ENABLED.ToInt32();
-        m_tbtStop.Enabled = m_axWebBrowser.Busy;
-        m_tbtRefresh.Enabled = (m_axWebBrowser.QueryStatusWB //Refresh
-          (SHDocVw.OLECMDID.OLECMDID_REFRESH).ToInt32() == nEnabledTest);
-        m_tbtMail.Enabled = (m_axWebBrowser.QueryStatusWB //Refresh test for Mail
-          (SHDocVw.OLECMDID.OLECMDID_REFRESH).ToInt32() == nEnabledTest);
-        m_tbtPrint.Enabled = (m_axWebBrowser.QueryStatusWB
-          (SHDocVw.OLECMDID.OLECMDID_PRINT).ToInt32() == nEnabledTest);
-        m_tbtEdit.Enabled = (m_axWebBrowser.QueryStatusWB //Refresh test for Edit
-        (SHDocVw.OLECMDID.OLECMDID_REFRESH).ToInt32() == nEnabledTest);
+        Int32 EnabledTest = Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_SUPPORTED)
+          + Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_ENABLED);
+        bool RefreshTest = EnabledTest.Equals(AxWebBrowser.QueryStatusWB //Refresh
+          (SHDocVw.OLECMDID.OLECMDID_REFRESH));
+        
+        TbRefresh.Enabled = RefreshTest;
+        TbMail.Enabled = RefreshTest;
+        TbEdit.Enabled = RefreshTest;
+        TbStop.Enabled = AxWebBrowser.Busy;
+        TbPrint.Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+          (SHDocVw.OLECMDID.OLECMDID_PRINT));
       }
     }
-    protected void m_axWebBrowser_ClientToHostWindow(object sender, DWebBrowserEvents2_ClientToHostWindowEvent e)
+    protected void AxWebBrowser_ClientToHostWindow(object sender, DWebBrowserEvents2_ClientToHostWindowEvent e)
     {
       
     }
-    protected void m_axWebBrowser_BeforeNavigate2(object sender, DWebBrowserEvents2_BeforeNavigate2Event e)
+    protected void AxWebBrowser_BeforeNavigate2(object sender, DWebBrowserEvents2_BeforeNavigate2Event e)
     {
-      e.p_cancel = false;
+
     }
     protected void mnuFile_Popup(object sender, EventArgs e)
     {
-      MenuItem miFile = m_mnuMain.MenuItems[0];
-      miFile.MenuItems[14].Checked = m_axWebBrowser.Offline;
-      Int32 nEnabledTest = SHDocVw.OLECMDF.OLECMDF_SUPPORTED.ToInt32()
-        + SHDocVw.OLECMDF.OLECMDF_ENABLED.ToInt32();      
-      miFile.MenuItems[2].Enabled = (m_axWebBrowser.QueryStatusWB //Refresh test for Edit
-        (SHDocVw.OLECMDID.OLECMDID_REFRESH).ToInt32() == nEnabledTest);
-      miFile.MenuItems[3].Enabled = (m_axWebBrowser.QueryStatusWB
-        (SHDocVw.OLECMDID.OLECMDID_SAVE).ToInt32() == nEnabledTest);
-      miFile.MenuItems[4].Enabled = (m_axWebBrowser.QueryStatusWB
-        (SHDocVw.OLECMDID.OLECMDID_SAVEAS).ToInt32() == nEnabledTest);
-      miFile.MenuItems[6].Enabled = (m_axWebBrowser.QueryStatusWB
-        (SHDocVw.OLECMDID.OLECMDID_PAGESETUP).ToInt32() == nEnabledTest);
-      miFile.MenuItems[7].Enabled = (m_axWebBrowser.QueryStatusWB
-        (SHDocVw.OLECMDID.OLECMDID_PRINT).ToInt32() == nEnabledTest);
-      miFile.MenuItems[8].Enabled = (m_axWebBrowser.QueryStatusWB
-        (SHDocVw.OLECMDID.OLECMDID_PRINTPREVIEW).ToInt32() == nEnabledTest);
-      miFile.MenuItems[13].Enabled = (m_axWebBrowser.QueryStatusWB
-        (SHDocVw.OLECMDID.OLECMDID_PROPERTIES).ToInt32() == nEnabledTest);
+      MenuItem miFile = MenuMain.MenuItems[0];
+      miFile.MenuItems[14].Checked = AxWebBrowser.Offline;
+      
+      Int32 EnabledTest = Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_SUPPORTED)
+          + Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_ENABLED);
+      
+      miFile.MenuItems[2].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB //Refresh test for Edit
+        (SHDocVw.OLECMDID.OLECMDID_REFRESH));
+      miFile.MenuItems[3].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_SAVE));
+      miFile.MenuItems[4].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_SAVEAS));
+      miFile.MenuItems[6].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_PAGESETUP));
+      miFile.MenuItems[7].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_PRINT));
+      miFile.MenuItems[8].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_PRINTPREVIEW));
+      miFile.MenuItems[13].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_PROPERTIES));
     }
     protected void mnuFileOpen_Click(object sender, EventArgs e)
     {
@@ -606,48 +589,48 @@ namespace Techinox.WebBrowser
       if(frmOpen.DialogResult == DialogResult.OK)
       {
         Object o = null;
-        m_axWebBrowser.Navigate(frmOpen.m_sAddress, ref o, ref o, ref o, ref o);
+        AxWebBrowser.Navigate(frmOpen.Address, ref o, ref o, ref o, ref o);
       }
     }
     protected void mnuFileEdit_Click(object sender, EventArgs e)
     {
       IHTMLDocument2 doc;
-      object boxDoc = m_axWebBrowser.Document;
+      object boxDoc = AxWebBrowser.Document;
       doc = (IHTMLDocument2)boxDoc;
       doc.designMode = "On";
     }
     protected void mnuFileSave_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_SAVE,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_SAVE,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_DODEFAULT,
         ref o, ref o);
     }
     protected void mnuFileSaveAs_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_SAVEAS,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_SAVEAS,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_PROMPTUSER,
         ref o, ref o);
     }
     protected void mnuFilePageSetup_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PAGESETUP,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PAGESETUP,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_PROMPTUSER,
         ref o, ref o);
     }
     protected void mnuFilePrint_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PRINT,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PRINT,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_PROMPTUSER,
         ref o, ref o);
     }
     protected void mnuFilePrintPreview_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PRINTPREVIEW,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PRINTPREVIEW,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_PROMPTUSER,
         ref o, ref o);
     }
@@ -659,13 +642,13 @@ namespace Techinox.WebBrowser
     protected void mnuFileProperties_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PROPERTIES,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PROPERTIES,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_PROMPTUSER,
         ref o, ref o);
     }
     protected void mnuFileWorkOffline_Click(object sender, EventArgs e)
     {
-      m_axWebBrowser.Offline = !m_axWebBrowser.Offline;
+      AxWebBrowser.Offline = !AxWebBrowser.Offline;
     }
     protected void mnuFileClose_Click(object sender, EventArgs e)
     {
@@ -673,50 +656,51 @@ namespace Techinox.WebBrowser
     }
     protected void mnuEdit_Popup(object sender, EventArgs e)
     {
-      Int32 nEnabledTest = SHDocVw.OLECMDF.OLECMDF_SUPPORTED.ToInt32()
-        + SHDocVw.OLECMDF.OLECMDF_ENABLED.ToInt32();
-      MenuItem miEdit = m_mnuMain.MenuItems[1];
-      miEdit.MenuItems[0].Enabled = (m_axWebBrowser.QueryStatusWB
-        (SHDocVw.OLECMDID.OLECMDID_CUT).ToInt32() == nEnabledTest);
-      miEdit.MenuItems[1].Enabled = (m_axWebBrowser.QueryStatusWB
-        (SHDocVw.OLECMDID.OLECMDID_COPY).ToInt32() == nEnabledTest);
-      miEdit.MenuItems[2].Enabled = (m_axWebBrowser.QueryStatusWB
-        (SHDocVw.OLECMDID.OLECMDID_PASTE).ToInt32() == nEnabledTest);
-      miEdit.MenuItems[4].Enabled = (m_axWebBrowser.QueryStatusWB
-        (SHDocVw.OLECMDID.OLECMDID_SELECTALL).ToInt32() == nEnabledTest);
+      Int32 EnabledTest = Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_SUPPORTED)
+          + Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_ENABLED);
+      
+      MenuItem miEdit = MenuMain.MenuItems[1];
+      miEdit.MenuItems[0].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_CUT));
+      miEdit.MenuItems[1].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_COPY));
+      miEdit.MenuItems[2].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_PASTE));
+      miEdit.MenuItems[4].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_SELECTALL));
     }
     protected void mnuEditCut_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_CUT,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_CUT,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_DODEFAULT,
         ref o, ref o);
     }
     protected void mnuEditCopy_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_COPY,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_COPY,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_DODEFAULT,
         ref o, ref o);
     }
     protected void mnuEditPaste_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PASTE,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PASTE,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_DODEFAULT,
         ref o, ref o);
     }
     protected void mnuEditSelectAll_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_SELECTALL,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_SELECTALL,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_DODEFAULT,
         ref o, ref o);
     }
     protected void mnuEditFind_Click(object sender, EventArgs e)
     {
       /* Object o = null;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_SHOWFIND,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_SHOWFIND,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_PROMPTUSER,
         ref o, ref o); */
     }
@@ -727,51 +711,52 @@ namespace Techinox.WebBrowser
     }
     protected void mnuView_Popup(object sender, EventArgs e)
     {
-      Int32 nEnabledTest = SHDocVw.OLECMDF.OLECMDF_SUPPORTED.ToInt32()
-        + SHDocVw.OLECMDF.OLECMDF_ENABLED.ToInt32();
-      MenuItem miView = m_mnuMain.MenuItems[2];
-      miView.MenuItems[1].Checked = m_barStatus.Visible; //Status Bar
-      miView.MenuItems[4].Enabled = m_axWebBrowser.Busy; //Stop
-      miView.MenuItems[5].Enabled = (m_axWebBrowser.QueryStatusWB //Refresh
-        (SHDocVw.OLECMDID.OLECMDID_REFRESH).ToInt32() == nEnabledTest);
-      miView.MenuItems[7].Enabled = (m_axWebBrowser.QueryStatusWB //Text Size
-        (SHDocVw.OLECMDID.OLECMDID_ZOOM).ToInt32()
-          == SHDocVw.OLECMDF.OLECMDF_SUPPORTED.ToInt32());
+      Int32 EnabledTest = Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_SUPPORTED)
+          + Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_ENABLED);
+      
+      MenuItem miView = MenuMain.MenuItems[2];
+      miView.MenuItems[1].Checked = BarStatus.Visible; //Status Bar
+      miView.MenuItems[4].Enabled = AxWebBrowser.Busy; //Stop
+      miView.MenuItems[5].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB //Refresh
+        (SHDocVw.OLECMDID.OLECMDID_REFRESH));
+      miView.MenuItems[7].Enabled = AxWebBrowser.QueryStatusWB //Text Size
+        (SHDocVw.OLECMDID.OLECMDID_ZOOM)
+          == SHDocVw.OLECMDF.OLECMDF_SUPPORTED;
     }
     protected void mnuViewStatusBar_Click(object sender, EventArgs e)
     {
-      m_barStatus.Visible = !m_barStatus.Visible;
+      BarStatus.Visible = !BarStatus.Visible;
     }
     protected void mnuViewGoToBack_Click(object sender, EventArgs e)
     {
-      m_axWebBrowser.GoBack();
+      AxWebBrowser.GoBack();
     }
     protected void mnuViewGoToForward_Click(object sender, EventArgs e)
     {
-      m_axWebBrowser.GoForward();
+      AxWebBrowser.GoForward();
     }
     protected void mnuViewGoToHomePage_Click(object sender, EventArgs e)
     {
-      m_axWebBrowser.GoHome();
+      AxWebBrowser.GoHome();
     }
     protected void mnuViewGoToSearchPage_Click(object sender, EventArgs e)
     {
-      m_axWebBrowser.GoSearch();
+      AxWebBrowser.GoSearch();
     }
     protected void mnuViewStop_Click(object sender, EventArgs e)
     {
-      m_axWebBrowser.Stop();
+      AxWebBrowser.Stop();
     }
     protected void mnuViewRefresh_Click(object sender, EventArgs e)
     {
       Object o = null;
-      m_axWebBrowser.Refresh2(ref o);
+      AxWebBrowser.Refresh2(ref o);
     }
     private void SetFontSize(Int32 nNewSize)
     {
       Object o = null;
       Object size = (object)nNewSize;
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_ZOOM,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_ZOOM,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_DONTPROMPTUSER,
         ref size, ref o);
     }
@@ -780,12 +765,12 @@ namespace Techinox.WebBrowser
       Object o = null;
       Object size = null;
       Int32 nSize;
-      MenuItem miView = m_mnuMain.MenuItems[2];
+      MenuItem miView = MenuMain.MenuItems[2];
       MenuItem miViewTextSize = miView.MenuItems[7];
       foreach(MenuItem mi in miViewTextSize.MenuItems)
         mi.Checked = false;
       
-      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_ZOOM,
+      AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_ZOOM,
         SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_DONTPROMPTUSER,
         ref o, ref size);
       nSize = (Int32)size;
@@ -830,22 +815,23 @@ namespace Techinox.WebBrowser
     }
     protected void mnuViewFullScreen_Click(object sender, EventArgs e)
     {
-      m_axWebBrowser.FullScreen = true;
+      AxWebBrowser.FullScreen = true;
     }
     protected void mnuFavourites_Popup(object sender, EventArgs e)
     {
-      Int32 nEnabledTest = SHDocVw.OLECMDF.OLECMDF_SUPPORTED.ToInt32()
-        + SHDocVw.OLECMDF.OLECMDF_ENABLED.ToInt32();
-      MenuItem miFavs = m_mnuMain.MenuItems[3];
-      miFavs.MenuItems[0].Enabled = (m_axWebBrowser.QueryStatusWB //Add to favourites
-        (SHDocVw.OLECMDID.OLECMDID_REFRESH).ToInt32() == nEnabledTest);
+      Int32 EnabledTest = Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_SUPPORTED)
+          + Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_ENABLED);
+      
+      MenuItem miFavs = MenuMain.MenuItems[3];
+      miFavs.MenuItems[0].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB //Add to favourites
+        (SHDocVw.OLECMDID.OLECMDID_REFRESH));
     }
     protected void mnuFavouritesAdd_Click(object sender, EventArgs e)
     {
       SHDocVw.ShellUIHelper shl;
       shl = new SHDocVw.ShellUIHelper();
-      Object title = (object)m_axWebBrowser.LocationName;
-      shl.AddFavorite(m_axWebBrowser.LocationURL, ref title);
+      Object title = (object)AxWebBrowser.LocationName;
+      shl.AddFavorite(AxWebBrowser.LocationURL, ref title);
     }
     protected void mnuFavouritesOrganise_Click(object sender, EventArgs e)
     {
@@ -855,42 +841,43 @@ namespace Techinox.WebBrowser
       Object o = null;
       shl.ShowBrowserUI("OrganizeFavorites", ref o); */
     }
-    protected void tbStandard_ButtonDropDown(object sender, System.WinForms.ToolBarButtonClickEventArgs e)
+    protected void tbStandard_ButtonDropDown(object sender, ToolBarButtonClickEventArgs e)
     {
       
     }
-    protected void tbStandard_ButtonClick(object sender, System.WinForms.ToolBarButtonClickEventArgs e)
+    protected void tbStandard_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
     {
-      if(e.button == m_tbtBack)
-        { m_axWebBrowser.GoBack(); }
-      if(e.button == m_tbtForward)
-        { m_axWebBrowser.GoForward(); }
-      if(e.button == m_tbtStop)
-        { m_axWebBrowser.Stop(); }
-      if(e.button == m_tbtRefresh)
+      if(e.Button == TbBack)
+        { AxWebBrowser.GoBack(); }
+      if(e.Button == TbForward)
+        { AxWebBrowser.GoForward(); }
+      if(e.Button == TbStop)
+        { AxWebBrowser.Stop(); }
+      if(e.Button == TbRefresh)
       {
         Object o = null;
-        m_axWebBrowser.Refresh2(ref o);
+        AxWebBrowser.Refresh2(ref o);
       }
-      if(e.button == m_tbtHome)
-        { m_axWebBrowser.GoHome(); }
-      if(e.button == m_tbtSearch)
-        { m_axWebBrowser.GoSearch(); }
-      if(e.button == m_tbtPrint)
+      if(e.Button == TbHome)
+        { AxWebBrowser.GoHome(); }
+      if(e.Button == TbSearch)
+        { AxWebBrowser.GoSearch(); }
+      if(e.Button == TbPrint)
       {
         Object o = null;
-        m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PRINT,
+        AxWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_PRINT,
           SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_PROMPTUSER,
           ref o, ref o);
       }
-      if(e.button == m_tbtEdit)
+      if(e.Button == TbEdit)
       {
         IHTMLDocument2 doc;
-        object boxDoc = m_axWebBrowser.Document;
+        object boxDoc = AxWebBrowser.Document;
         doc = (IHTMLDocument2)boxDoc;
         doc.designMode = "On";
       }
     }
+    
     protected void cmbAddress_SelectionChangeCommited(object sender, System.EventArgs e)
     {
       
@@ -898,39 +885,39 @@ namespace Techinox.WebBrowser
     protected void cmbAddress_SelectedIndexChanged(object sender, System.EventArgs e)
     {
       Object o = null;
-      String sURL = m_cmbAddress.Items[m_cmbAddress.SelectedIndex].ToString();
-      m_axWebBrowser.Navigate(sURL, ref o, ref o, ref o, ref o);
+      String sURL = ComboAddress.Items[ComboAddress.SelectedIndex].ToString();
+      AxWebBrowser.Navigate(sURL, ref o, ref o, ref o, ref o);
     }
     protected void cmbAddress_KeyPress(object sender, KeyPressEventArgs e)
     {
       e.Handled = false;
       if(e.KeyChar == '\r')
       {
-        String sURL = m_cmbAddress.Text;
-        int index = m_cmbAddress.FindStringExact(sURL);
+        String sURL = ComboAddress.Text;
+        int index = ComboAddress.FindStringExact(sURL);
         if(index == -1)
         {
-          m_cmbAddress.Items.Add(sURL);
-          m_cmbAddress.SelectedIndex = m_cmbAddress.FindStringExact(sURL);
+          ComboAddress.Items.Add(sURL);
+          ComboAddress.SelectedIndex = ComboAddress.FindStringExact(sURL);
         }
         else
         {
-          m_cmbAddress.SelectedIndex = index;
+          ComboAddress.SelectedIndex = index;
         }
       }
     }
     protected void btnGo_Click(object sender, System.EventArgs e)
     {
-      String sURL = m_cmbAddress.Text;
-      int index = m_cmbAddress.FindStringExact(sURL);
+      String sURL = ComboAddress.Text;
+      int index = ComboAddress.FindStringExact(sURL);
       if(index == -1)
       {
-        m_cmbAddress.Items.Add(sURL);
-        m_cmbAddress.SelectedIndex = m_cmbAddress.FindStringExact(sURL);
+        ComboAddress.Items.Add(sURL);
+        ComboAddress.SelectedIndex = ComboAddress.FindStringExact(sURL);
       }
       else
       {
-        m_cmbAddress.SelectedIndex = index;
+        ComboAddress.SelectedIndex = index;
       }
     }
 

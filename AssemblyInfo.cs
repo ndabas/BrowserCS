@@ -6,12 +6,12 @@ using System.Runtime.CompilerServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("Techinox WebBrowser")]
-[assembly: AssemblyDescription("Techinox WebBrowser")]
+[assembly: AssemblyTitle("Nikhil's .NET Web Browser")]
+[assembly: AssemblyDescription("Nikhil's .NET Web Browser")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Techinox")]
-[assembly: AssemblyProduct("WebBrowser")]
-[assembly: AssemblyCopyright("Copyright (C) 2001 Nikhil Dabas")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("")]
+[assembly: AssemblyCopyright("(c) 2001-2002 Nikhil Dabas")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 
@@ -26,7 +26,7 @@ using System.Runtime.CompilerServices;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("1.0.462.33592")]
+[assembly: AssemblyVersion("1.0.*")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 

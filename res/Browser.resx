@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+            Microsoft ResX Schema 
+        
+            Version 1.3
+                
+            The primary goals of this format is to allow a simple XML format 
+            that is mostly human readable. The generation and parsing of the 
+            various data types are done through the TypeConverter classes 
+            associated with the data types.
+        
+            Example:
+        
+                ... ado.net/XML headers & schema ...
+                <resheader name="resmimetype">text/microsoft-resx</resheader>
+                <resheader name="version">1.3</resheader>
+                <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+                <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+                <data name="Name1">this is my long string</data>
+                <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+                <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+                    [base64 mime encoded serialized .NET Framework object]
+                </data>
+                <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+                    [base64 mime encoded string representing a byte array form of the .NET Framework object]
+                </data>
+        
+            There are any number of "resheader" rows that contain simple 
+            name/value pairs.
+            
+            Each data row contains a name, and value. The row also contains a 
+            type or mimetype. Type corresponds to a .NET class that support 
+            text/value conversion through the TypeConverter architecture. 
+            Classes that don't support this are serialized and stored with the 
+            mimetype set.
+                     
+            The mimetype is used for serialized objects, and tells the 
+            ResXResourceReader how to depersist the object. This is currently not 
+            extensible. For a given mimetype the value must be set accordingly:
+        
+            Note - application/x-microsoft.net.object.binary.base64 is the format 
+                   that the ResXResourceWriter will generate, however the reader can 
+                   read any of the formats listed below.
+        
+            mimetype: application/x-microsoft.net.object.binary.base64
+            value   : The object must be serialized with 
+                    : System.Serialization.Formatters.Binary.BinaryFormatter
+                    : and then encoded with base64 encoding.
+        
+            mimetype: application/x-microsoft.net.object.soap.base64
+            value   : The object must be serialized with 
+                    : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+                    : and then encoded with base64 encoding.
+            mimetype: application/x-microsoft.net.object.bytearray.base64
+            value   : The object must be serialized into a byte array 
+                    : using a System.ComponentModel.TypeConverter
+                    : and then encoded with base64 encoding.
+        -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MenuViewToolbarsAddress">
+    <value>&amp;Address Bar</value>
+  </data>
+  <data name="IconOpen" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhIAAgAPcAAAAAHwAALwAAQAAAUAAAYQAAcQAAmgAAzAAA/QAvLwAvYQAvmgAvzAAv/QBhYQBh
+        mgBhzABh/QCamgCazACa/QDMzADM/QD9/S8vLy8vYS8vmi8vzC8v/S9hmi9hzC9h/S+ami+azC+a/S/M
+        zC/M/VBQUGFhmmFhzGFh/WGammGazGGa/WHMzGHM/WH9/ZqampqazJqa/ZrMzJrM/Zr9/aOjo8zMzMzM
+        /cz9/dzc3P39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /SH5BAEAADoALAAAAAAgACAAAAj/AHUIHEjQxgsTGh4UIPBAwwkYNwhKnDhQhokEDx4saMARwoKPCk7M
+        oEjxBosCHw0oyDgBgksICgigPJGD5EAYHSRMiGAAQoULQIFa8LhAgAEDG2TYhKGBAYMIFhgsmBA0qAWF
+        CrIu0ACDIlMDE6S6ZACBatULFRRmHKBAg1KCNzQYOHCAgYEFTxl4sHDWQoUFBBQUHaCh5kAWEyhwjKBY
+        BIkVH0KMOFtBQkwHCgQQMFHxAYXPDD6TaEGj9AoPDypY8FthAlYHAgIoeKvC4+fGLmjgwEED8oIHEyoI
+        b505awAAKXTceED0cwQRpHfTaPEBwYKVw11ndjAgQIIcMiZM//gIwQKFDytKx1ghIkIDqb91TrAcWAEA
+        AC9UJPYI/IKIDyigcMIGTUXglAEFPCDBgg8IIEACx5XQwQQWuAacef9x4IFdC4z10UcZWeZdAgBg4AAE
+        FFTIknlOOXXAb8xpdJQCDljmIIkBSECWeDxWCEGLRAGn0UcFZKUAhAmQqGNdwoknnEcGCBmlhSkRAECS
+        AHgHgAQddujkkwvcBWVWGWmU1YPHeRcACAbAV1aTEjxw1FEEdLfSA0Z2d593GaRQQJRh/kZlmHfhGdgD
+        DmB2poPelfBCgx/e9VtKC01aJI2KLioAADUsh9mkR31YwEIrxfQgjUYeeaMNOqjgQIMKoJsU5qgLDVAk
+        AbF5l2pWSXKmwwxx4jlARqMSYKyxZwZw6q5HdiUQCytxV19WxrJlXGxJ7pqArwN1EK0CbCWaqgMQ3pjA
+        rh1QlIGRAgxwI69JKjtiqhmQhNO5Ryqb5L6M6sprBs5SJAMIRkIob2z9FpxBDTYNpMKR+SrrYGxXHrlt
+        wxLJ8PC+93VcsQkBY5xxCh04EMDJGZTwlk0BAQA7
+</value>
+  </data>
+  <data name="MenuViewStatusBar">
+    <value>Status &amp;Bar</value>
+  </data>
+  <data name="MenuTools">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="MenuFavourites">
+    <value>F&amp;avourites</value>
+  </data>
+  <data name="ImagesToolbar" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02SwAAAAAAADYAAAAoAAAAQAEAABQAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAA/wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD/78ep78Wm9NnE/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/9t/N/wD//wD//wD/67qV/wD//wD//wD/9t/N/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/3IRB3IRB/wD//wD//wD//wD//wD//wD/3IRB3IRB3IRB/wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/3IRB3IRB/wD//wD//wD//wD//wD//wD/3IRB3IRB3IRB/wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD/9t/N8tC38tC3/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/8Myw4Zdf
+        6reQ8tC39d3L/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD/9t/N78ep56p83YdG4ppk9NnE/wD//wD//wD//wD//wD/
+        7cCe3IRB3otM4JNY6K+E78ep9t/N/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/8c+1
+        4ppk6rSL89W+/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/9t/N7cGf4JNY56p8/wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD/9+LS/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/5qd4/wD//wD/89W+5qd4/wD//wD/8tC378Wm/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD/5ql66rWN6rWN3IRB/wD//wD//wD//wD//wD/5ql65ql63IRB/wD//wD//wD//wD//wD//wD/
+        /wD//wD/5ql66rWN6rWN3IRB/wD//wD//wD//wD//wD/5ql65ql63IRB/wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/9NnE67qV4plh4JFV4JNY4plh4plh6K+E78Wm9t/N/wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD/89W+9t/N/wD//wD//wD//wD//wD//wD//wD//wD/8c2y3YhH
+        3oxO455p5aRy5aV17b+c8tC39d3L/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD/9NnE7L2a4JFV3YdG4JFV4ppk4plh67qV/wD//wD//wD//wD/9t/N
+        4JFV3YdG4ppk56p86K+D5aRz5aRz7cGf9t/N/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/78Wm
+        3IRB3IRB4JFV67qV9t/N/wD//wD//wD//wD//wD//wD//wD/78ep4JFV3otM4JFV5aJw/wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD/5qd3349T4ZVc45xn5aV15aRz4JJX/wD//wD//wD/5aJw4JNY4ZZd6bKI/wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD/9dzJ4ZVc5KBt+OXX/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/5qd467qV/wD/78ep4JNY/wD/9t/N4JFV9NnE/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD/5ql6+ObZ7cGf3IRB/wD//wD//wD//wD//wD/5ql67cGf3IRB/wD//wD//wD//wD//wD//wD/
+        /wD//wD/5ql6+ObZ7cGf3IRB/wD//wD//wD//wD//wD/5ql67cGf3IRB/wD//wD//wD//wD//wD//wD/
+        /wD/9t/N7L2a3IRB3otM4ppk5aRz56p856p856p85aRz4ppk5KBt8c+1/wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD/6rSL3IRB3otM9NnE/wD//wD//wD//wD//wD//wD//wD/89W/4ZRa
+        3YlJ45xn5ql65qd45qd35aV15aRz5J9r7LyY8tC39d3L/wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD/9NnE67qV3IRB3YdG4JFV4JNY5KBt5qd45aJw5aJw/wD//wD//wD//wD/78ep
+        3YdG4JNY5aJw5qd46K+E6K+E6K+E5qd45aRz7cGf9t/N/wD//wD//wD//wD//wD//wD//wD//wD/9t/N
+        4JNY3YdG4JFV4plh5KBt78Wm/wD//wD//wD//wD/89W+6K+E3YdG4JFV4ppk3otM78Wm/wD//wD//wD/
+        /wD//wD//wD//wD/9d3L6reQ6K2B6K+D6K+D8tK5/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD/5KFu3IRB3oxO4plh5ql65aV13IRB/wD//wD//wD/45xn3IRB3oxO6K+D/wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD/6rSL3oxO3opL4JFV45xm7sOj/wD//wD//wD//wD//wD//wD//wD/7sOj5aRz
+        56x/6bGG6bGG6K+E56x/56x/56x/56x/6K2B6K2B6bGG6bGG6bKI6bKI6K+D6bKI9NjD/wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD/9dvI89S889W+9d3L/wD//wD//wD//wD//wD//wD/9NnE
+        89W+/wD//wD/78Wm3IRB89W+6rSL4JFV/wD/5qd44plh/wD//wD/9t/N78ir/wD//wD//wD/3IRB3IRB
+        3IRB3IRB5ql6+ObZ7cGf3IRB3IRB3IRB3IRB3IRB3IRB5ql67cGf3IRB3IRB3IRB3IRB3IRB3IRB3IRB
+        3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB3IRB/wD//wD/
+        9t/N5aJw3IRB4JFV4ppk5aRz56p86K+E6bKI6bKI6bKI6K+D5aRz4plh78ep/wD//wD//wD//wD/6rSL
+        3IRB3YdG4JFV4JFV4JFV4JFV4JFV4JFV3otM3otM3otM3otM4JFV4JFV4JFV3otM6K+D9t/N/wD//wD/
+        /wD//wD//wD//wD//wD//wD/9NnE3IRB3YdG4JNY6bKI/wD//wD//wD//wD//wD//wD//wD/89fB4plh
+        4JNY455p6K+D6rWN6bGG6K2B5aV14pli4pli45xm4ZRa8c2y/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/9t/N7cCe3IRB3YdG3otM4JFV4plh4ppk5qd46bKI6K+D4ppk8tC3/wD//wD//wD/67qV
+        4JNY5aJw5aJw5aJw5aRz5qd46K+D6bKI6bKI5qd45aRz78ep/wD//wD//wD//wD//wD//wD//wD//wD/
+        7cGf4JNY4plh4plh5KBt4ppk6K+E8tC39t/N7cCe3YdG3otM4JNY5aJw4JFV4ppk/wD//wD//wD//wD/
+        /wD//wD/9uDP6K+E45xn345Q3oxO3YlJ3IRB6bKJ89W+/wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD/5qd34JFV455p5KBt5aV15J9r3IRC/wD//wD//wD/5KBt3YhH349S6K+D/wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD/9NjD78ep7cCe7LyX7cCe78Wm9+LS/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/9uDQ5J9r3IRB3oxO4pli5aRy5aRz4plh6rWN/wD//wD//wD//wD//wD//wD/4JNY3IRB
+        4plh5KFu5KFu455p4pli4plh4plh4plh4pli4ppk45xn455p5KFu5qd35aRy4JJX78Wm/wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD/7cGf3opL4ppk45xn45xn5J9r5KBt4plh9NrG/wD//wD//wD//wD/
+        56p856p89NnE9NnE3IRB4ppk56p85aJw6rSL4ppk67qV/wD/78ep4ppk89W+/wD//wD//wD/7sSk+ObZ
+        +ObZ+ObZ5ql6+ObZ7cGf3IRB+ObZ+ObZ+ObZ+ObZ+ObZ5ql67cGf3IRB+ObZ+ObZ+ObZ3IRB7sSk+ObZ
+        +ObZ+ObZ7sSk+ObZ+ObZ7sSk+ObZ+ObZ+ObZ+ObZ+ObZ7sSk+ObZ7sSk+ObZ+ObZ+ObZ3IRB/wD//wD/
+        6rSL3IRB4JFV4ppk5aJw5aJw5aRz5qd46K+D6K+D6bKI6bKI6bKI5qd44ppk78ep/wD//wD/8tC33IRB
+        3YdG4JNY5KBt5aJw5aJw5aJw5KBt4ppk4ppk4ppk4ppk4ppk4ppk4ppk5aJw5KBt4JNY7cGf/wD//wD/
+        /wD//wD//wD//wD//wD//wD/7cCe3IRB4JFV5aJw4plh9t/N/wD//wD//wD//wD//wD//wD/9NjD45xm
+        45xn5KFu5aRz56p86bGG6bKJ5qd36K+D56p8345Q3IZE5ql6/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD/8tC34ppk3YdG3otM4JFV4plh4ppk4ppk5aJw5qd46bKI6bKI5KBt7cGf/wD//wD//wD/5aJw
+        4ppk5aRz5aJw5KBt5KBt5aJw5qd456p86bKI6rSL6bKI5aJw6rSL9t/N/wD//wD//wD//wD//wD//wD/
+        /wD/5qd45KBt5KBt5KBt5qd45aJw5KBt5aRz4plh4ppk4ppk5qd44JNY3IRB8tC3/wD//wD//wD//wD/
+        /wD/+OXX45xm3YlJ345Q4ppk4ZZd4JJX7b+c/wD//wD//wD/9t/N9dzJ/wD//wD//wD//wD//wD//wD/
+        /wD/5qd34ZVc5aRz5KFu5aJw45xn3IRB/wD//wD//wD/5KFu349S4ZRa6bKI/wD//wD//wD//wD//wD/
+        /wD//wD//wD/78Wm5J9r4JNY45xm6K+D7sOj6rWN5KBt4ppk5qd38Myw/wD//wD//wD//wD//wD//wD/
+        /wD//wD/9d3L4JNY3IRB4JJX4pli5KFu56x/6bKI6K+D4ppk5ql6/wD//wD//wD//wD//wD/4pli349S
+        5aRy56t956p856p85qd35aV15aV15aRz5aRy5aRy5aJw5aJw5aRy56p86K2B4plh7sSk/wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD/78eo45xn6raO6rSL45xn3oxO3YlJ349T9d3L/wD//wD//wD//wD/
+        9t/N4JFV3IRB6K+E4JNY4plh5aRz6K+D6K+E56p86rSL5aJw3otM78ep/wD//wD//wD//wD/7sSk/vz6
+        /vz6/vz65ql6+ObZ7cGf3IRB+ObZ/vz6/vz6/vz6/vz65ql67cGf3IRB+ObZ/vz6+ObZ3IRB7sSk/vz6
+        /vz6/vz67sSk/vz6+u/m7sSk/vz6/vz6/vz6/vz6/vz67sSk+u/m7sSk/vz6/vz6+ObZ3IRB/wD/78ep
+        3IRB3otM4ppk5aJw5aJw5aJw5aJw5aJw5aJw5aRz5aRz5qd46K+E6K+E5qd45aJw9t/N/wD/8tC33otM
+        4JNY4ppk5aJw5aRz5qd45qd45qd45qd45aRz5aRz5aRz5aRz5aRz5qd46K+E6K+E5KBt7cGf/wD//wD/
+        /wD//wD//wD//wD//wD//wD/4ppk3YdG4ppk6K+D5KBt78ir/wD//wD//wD//wD//wD//wD/9+LS455p
+        5aJw56p85KFu5KFu5qd35ql64ppk6raO/PXv89S88Mqu9dzJ7sOj/wD//wD//wD//wD//wD//wD//wD/
+        /wD/7L2a3IRB3otM4JNY4plh4ppk4ppk4ppk4ppk5aJw5aRz6K+D6K+E5aJw6rSL/wD//wD//wD/3otM
+        4ppk5aJw5aJw5KBt5KBt5aJw5aRz5qd456p86K+E6bKI6bKI5qd45aJw89W+/wD//wD//wD//wD//wD/
+        /wD/8c+14plh5qd45aJw5aRz6K+E6K+E6K+D5qd45qd45aRz4plh3YdG6rSL/wD//wD//wD//wD//wD/
+        /wD/4pli3IRB4ZVc5aRz4Zdf4JFV8Myw/wD//wD//wD/67iS3opL4JFV6bGG9uDP/wD//wD//wD//wD/
+        /wD/5qd34ZZd5aRz5aJw5aRy5KFu3opL/wD//wD//wD/5KFu3oxO4ZZd6bKJ/wD//wD//wD//wD//wD/
+        /wD/9+TV4plh4JNY78ep+ere9+TV9NrG9NrG9uDP+OXX+Ofa67mT4JJX6K+D/wD//wD//wD//wD//wD/
+        /wD/9d3L4JFV3IRB4plh455p5KFu5qd356x/6K+D6bGG6rSL455p56p8/wD//wD//wD//wD/5KBt4ppk
+        5aJw5KBt5KBt5KBt5J9r5J9r5J9r5J9r455p45xn5J9r5KFu5KFu5J9r455p4ZZd78Wm/wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD/89S88Myw78eo78ir9NnE/wD//wD//wD//wD//wD//wD/
+        /wD/9t/N3otM3otM4plh5KBt5KBt5aRz6K+D6bKI6K+E5aJw7cCe/wD//wD//wD//wD//wD/7sSk/vz6
+        /vz6/vz65ql6+ObZ7cGf3IRB+ObZ/vz6/vz6/vz6/vz65ql67cGf3IRB+ObZ/vz6+ObZ3IRB7sSk/vz6
+        /vz6/vz67sSk/vz6+u/m7sSk/vz6/vz6/vz6/vz6/vz67sSk+u/m7sSk/vz6/vz6+ObZ3IRB/wD/4ppk
+        3otM4plh5KBt5KBt5KBt4ppk4ppk4ppk4ppk5KBt5KBt5KBt5qd456p86K+E5KBt7cGf/wD/8tC34JNY
+        5aJw5aJw5KBt5aJw5aJw5aJw5qd45aRz5aJw5KBt5aJw5aJw5aJw5qd46K+E6bKI5aJw7cGf/wD//wD/
+        /wD//wD//wD//wD//wD//wD/3IRB3otM5aJw6K+E5aRz7L2a/wD//wD//wD//wD//wD//wD/9+LS45xm
+        5qd36bKJ5aV145xn45xn45xn4Zdf67qV8tC37cCe7b+c6bKJ4ppk6reQ/wD//wD//wD//wD//wD//wD/
+        6rSL3IRB4JFV4plh4ppk5KBt5KBt5KBt5KBt5KBt5KBt5aJw5aRz5qd45KBt6bKI/wD//wD/89W+3otM
+        4ppk5KBt5KBt5aJw5aRz5qd45qd45qd45qd45qd46K+D6bKI6bKI56p85aJw89W+/wD//wD//wD//wD/
+        /wD//wD/6bKI5aJw6K+E5aJw56p86bKI6K+E6K+E56p84ppk4JFV4JFV9NnE/wD//wD//wD//wD//wD/
+        8Mqu3YdG3oxO5aRy455p4ZVc8Myw/wD//wD/8tK54plh3IRC349S4ppk5KFu5qd39dzJ/wD//wD//wD/
+        /wD/5qd34JFV45xm5J9r5ql65ql64ZRa/wD//wD//wD/455p3YhH4ZZd6bKJ/wD//wD//wD//wD//wD/
+        8Mqt4ZRa5qd4+evh////9NrG5KBt4JFV4plh455p56p8+ObZ////+Ojc5KBt4plh9t/N/wD//wD//wD/
+        9d3L4JJX3IRB4ZVc5KFu5qd35qd45ql65ql65ql66K2B6bGG6rWN455p56p8/wD//wD//wD/5aV16bKI
+        5KFu4JNY4ZVc4ZZd4ZZd4ZZd4ZZd4ZZd4ZZd4ZZd4Zdf45xm5aJw5aJw4ZZd4JFV78Wm/wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/78Wm6rSL
+        6rSL67qV6K+D4plh5aJw5aJw5aJw5aJw5aJw56p86bKI6K+E7cCe7L2a67qV67qV9NnE/wD/7sSk/vz6
+        /vz6/vz65ql6+ObZ7cGf3IRB+ObZ/vz6/vz6/vz6/vz65ql67cGf3IRB+ObZ/vz6+ObZ3IRB7sSk/vz6
+        /vz6/vz67sSk/vz6+u/m7sSk/vz6/vz6/vz6/vz6/vz67sSk+u/m7sSk/vz6/vz6+ObZ3IRB89W+3YdG
+        4JFV4ppk5aJw5aJw4ppk4ppk4plh4plh4ppk5aJw5aJw5aJw5aJw4ppk5aJw5aJw5qd4/wD/8tC34plh
+        6K+D56p85aRz5aJw5KBt4ppk4plh4ppk5aJw5qd46K+D5qd45KBt5aJw56p86bKI5aJw7cGf/wD//wD/
+        /wD//wD//wD//wD//wD/9NnE3YdG4JFV5aRz6K+E6K+E6K+E/wD//wD//wD//wD//wD//wD//wD/5KFu
+        6K+D7sOj455p4Zdf4ZZd3oxO3IRB7sOj7sKh4pli5KBt5qd35qd35KBt78ir/wD//wD//wD//wD/78ep
+        3IRB3otM4plh5KBt5aJw5aJw5aJw5aJw5aJw5aJw5aJw5KBt5KBt5aJw4ppk4ppk/wD//wD/8tC33otM
+        4ppk4ppk5KBt5aRz5qd456p856p85qd45qd45qd45qd46K+D6bKI6bKI5aJw6bKI/wD//wD//wD//wD/
+        /wD//wD/9NnE4plh6bKI5qd45aJw5qd45qd45qd45aJw4ppk4JFV7cGf/wD//wD//wD//wD//wD//wD/
+        4Zdf3IZE4Zdf5aRz4ZRa6bKI/wD//wD/78ep349T3YlJ4JNY4Zdf5KFu6K+E56p85KFu/wD//wD//wD/
+        /wD/5qd3349T4pli455p6K2B6bKJ5aRy/wD//wD//wD/455p345Q5J9r6raO/wD//wD//wD/4ppk3YhH
+        4ppk7sOj+/Lr////+erf4JFV3YdG4ppk5aV16K2B5aRz5aV1+u/m////+/Hq6K2B5KFu/wD//wD//wD/
+        4ZVc3IRB349T5J9r5qd356p85ql65ql65qd45qd35qd356p86K+D6rSL45xn6K+E/wD//wD/56p86K2B
+        5J9r455p5KBt5KFu5KFu5KFu5KFu5KFu5KFu5KBt5KFu5aRz5qd46K2B5J9r3YlJ7sSk/wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/78Wm
+        3otM3YdG4JNY5KBt5aJw5aJw5aJw5aJw5KBt5aJw6K+D6bKI5aJw4JFV6bKI9NnE/wD//wD/7sSk/vz6
+        /vz6/vz65ql6+ObZ7cGf3IRB+ObZ/vz6/vz6/vz6/vz65ql67cGf3IRB+ObZ/vz6+ObZ3IRB7sSk/vz6
+        /vz6/vz67sSk/vz6+u/m7sSk/vz6/vz6/vz6/vz6/vz67sSk+u/m7sSk/vz6/vz6+ObZ3IRB7cGf3otM
+        4plh5KBt5aJw5KBt4ppk4JNY4JFV4JFV4JFV4JNY4plh4ppk5aJw6K+D5qd44ppk4JNY9NnE8tC34plh
+        6bKI6bKI5qd44ppk4plh4JFV4JFV5qd46rSL5aRz7cCe8c+16rSL5aRz5aRz6K+D5KBt7cGf/wD//wD/
+        /wD/9t/N7cCe5aRz4JFV3YdG4JFV4ppk5aJw56p86bKI6bKI5aRz5qd46rSL8tC3/wD//wD//wD/6K+E
+        5J9r6rWN78ep6rWN3oxO3YhH56x/9uDQ6bKJ4plh5aRy6bGG6bKI56x/45xn9NnE/wD//wD//wD/6K+E
+        3otM5aJw5aJw5aJw5aJw5aJw5aJw5KBt5aJw5aJw5aJw5KBt5KBt5aJw4ppk3otM/wD//wD/8tC34JFV
+        4ppk4ppk5KBt5aJw5aRz5qd45qd45qd45qd45aRz5aRz5qd456p856p85KBt3YdG9t/N/wD//wD//wD/
+        /wD//wD//wD/7cCe5qd456p85aJw5aJw5aJw5aJw5aJw5aJw5qd4/wD//wD//wD//wD//wD//wD//wD/
+        45xm349T5KBt5aV14ZRa89W//wD//wD/6reQ4Zdf5aRz5qd4455p5J9r5qd45aV13IZE/wD//wD//wD/
+        /wD/5aRz3oxO4pli5J9r56p86bKJ6bGG6K+D56t95qd3349S455p5ql66raO/wD//wD//wD/4JJX3IZE
+        5KBt+OXX////////7b+c3IRB4ZVc5aJw56p86bGG6bKJ45xn78ep//7+////+ObZ4JFV9NjD/wD/5KFu
+        3IRB349S4plh5KFu5aV15qd35qd35aV15aRy5aJw5aJw5aRz5aV16K+D6bGG45xn7sOj/wD/5KFu4JFV
+        7sSk89S88c+18c6z8c2y8c2y8c2y8c2y8c2y8c2y8c2y8c2y8c+19d3L56p83IRB7sKh/wD//wD//wD/
+        /wD//wD//wD/8Mqu7LyX/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD/8tC35aJw5aJw5aJw5aJw5aJw5aJw5KBt5KBt5qd46bKI67qV9t/N/wD//wD//wD//wD/7sSk/vz6
+        /vz6/vz65ql6+ObZ7cGf3IRB+ObZ/vz6/vz6/vz6/vz65ql67cGf3IRB+ObZ/vz6+ObZ3IRB7sSk/vz6
+        /vz6/vz67sSk/vz6+u/m7sSk/vz6/vz6/vz6/vz6/vz67sSk+u/m7sSk/vz6/vz6+ObZ3IRB7cGf4JFV
+        5aJw5aJw5aJw5KBt4ppk4JNY56p88tC38tC38tC38tC38tC38tC38tC37L2a5aRz4JNY8tC38tC34plh
+        6K+E7cCe5qd44plh4JFV3YdG78ep9t/N9NnE89W+6rSL9NnE+Ojc7L2a56p85qd44ppk7cGf/wD//wD/
+        6rSL3YdG3IRB3otM4JFV4JNY4plh4ppk5aJw5qd46K+D6bKI6bKI6K+E5qd44ppk5KBt89W+/wD/7sSk
+        45xn3YlJ8Mqt9dvI/PXv/fr39dvI7L2a45xn5J9r5ql66K+E6rSL6bKJ5aV15qd39dzJ/wD//wD/67qV
+        4plh7sKh6rSL5aRz5aJw5KBt5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw4ppk3YdG/wD//wD/8tC34JFV
+        5KBt5aJw5aJw5aJw5aJw5aJw5aRz5aRz5aRz5aRz5aRz5aJw5aJw5KBt4JFV4JFV/wD//wD//wD//wD/
+        /wD//wD//wD/6K+D5KBt5qd45aJw4ppk4ppk5aJw5qd456p85KBt8tC3/wD//wD//wD//wD//wD/89fB
+        4ppk4ZVc5aV156p8455p8c+1/wD//wD//wD/9NnE7LyX5qd456t95qd35KBt5aRz67mT/wD//wD//wD/
+        /wD/5aV14JJX4ppk5J9r5aRz6K2B6K+E5aRy4plh349S4ZZd56p85qd36rSL/wD//wD//wD//wD/8tK6
+        5aRz5KFu+u3k////67mT349T45xn5KFu5aRy5qd356x/5J9r6bKJ/////PPt5qd35KBt/wD/8Mqt3IRB
+        349S4plh5KBt5aJw5aRy5aJw5aJw5aJw5aJw5KFu5KFu5KBt5KFu5qd46bGG5ql65aJw9+TV5KFu3YhH
+        8Myw6reQ4plh5aV156x/6K2B56x/56x/56t956t956t956p87LyY/wD/4JJX3otM8Mqu/wD//wD//wD/
+        /wD//wD//wD/3IZE349S9+PU/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/9t/N
+        67qV4ppk5aJw5aJw5aJw5aJw5KBt5KBt5KBt5KBt5aRz6K+E5aJw6K+D8tC3/wD//wD//wD/7sSk/vz6
+        /vz6/vz65ql6+ObZ7cGf3IRB+ObZ/vz6/vz6/vz6/vz65ql69NrG3IRB+ObZ/vz6+ObZ3IRB7sSk/vz6
+        /vz6/vz67sSk/vz6+u/m7sSk/vz6/vz6/vz6/vz6/vz67sSk+u/m7sSk/vz6/vz6+ObZ3IRB7cGf4plh
+        6K+E5aRz5KBt5KBt5KBt4plh6bKI////////////////////////////7cGf4JNY4JNY8tC38tC34plh
+        6K+E6K+D4ppk4JFV3YdG78ep89W+4ppk4ppk78ep89W+6rSL8tC39uDQ67qV5KBt4ppk7cGf/wD/8tC3
+        3IRB3otM4plh5qd45qd45aRz5aJw5KBt5aJw5aRz5qd45qd45qd45qd45aRz4ppk4JFV4JFV/wD/89S8
+        45xm3YdG8Mqt7sSk5KBt5J9r5KFu45xn455p5aRy56p86K+E6bKI6rSL6bKI5KFu6bKJ9+TV/wD/9t/N
+        5qd45qd478ep67qV56p85aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw4plh56p8/wD//wD/8tC34JFV
+        5aJw5aJw5aJw5KBt5KBt5KBt5KBt5aJw5aJw5aJw5aJw5KBt4ppk4JFV3IRB78ep/wD//wD//wD//wD/
+        /wD//wD/78Wm3otM5KBt6K+D5aJw4ppk4ppk4ppk5qd46K+E56p86bKI/wD//wD//wD//wD/56t94JJX
+        45xn5aV15aRz5aRz5aV1455p5KFu8c+1/wD//wD/9dzJ4JFV6K2B6K+E4plh5KFu9d3L/wD/89W+5aRz
+        455p5J9r5qd45qd45KFu5J9r5aRz5aV15qd35aJw45xn455p5KFu4pli45xm5J9r5qd489W+/wD//wD/
+        /wD/4pli6bKJ/vz67cGf45xm5aV15KFu455p455p5KBt4plh7LyX+evh5qd34JFV9+LS/wD/56p83YhH
+        4plh5J9r5KFu5KFu5aJw5aJw5KFu5KFu5KFu5KFu5KBt5KBt5KFu5aV156p86bKJ45xn7LyY/wD//wD/
+        /wD/5aRz3IRC4Zdf5qd356p85qd45qd35aRz5aV15ql65qd36bKJ/wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD/8tK53YhH5aRz7sSk/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/6rSL3YdG
+        4JNY56p86rSL6K+E5aJw5aJw5KBt5KBt5KBt5KBt5aJw5aJw5qd45aJw3IRB4ppk8tC3/wD/7sSk/vz6
+        /vz6/vz65ql6+ObZ7cGf3IRB+ObZ3IRB3IRB/vz6/vz63IRB9uDQ3IRB+ObZ/vz63IRB3IRB7sSk/vz6
+        /vz6/vz67sSk/vz6+u/m7sSk/vz67sSk7sSk/vz6/vz67sSk+u/m7sSk/vz6/vz67sSk3IRB7cGf4ppk
+        78ep6K+E5KBt5KBt5KBt4ppk6bKI////89W+6K+D6K+E6bKI6bKI6bKI5qd45aRz4JFV8tC38tC34JNY
+        6rSL6bKI4JFV3YdG7cCe9t/N4JNY4JNY5aJw5qd478ep89W+6rSL8c+17L2a4plh4JFV7cGf/wD/89W+
+        3YdG4plh6K+D6rSL67qV6rSL5qd45aJw5aJw5aJw5aJw5KBt4ppk4JNY4JFV3otM3IRB4ppk/wD/9NjD
+        345Q5aRy9dzJ4ppk3otM45xm5aJw5aRy5aJw5aJw5qd46K+D6bKI6rSL6bKJ5aV14JJX8tK6/wD//wD/
+        9NnE6K+E5KBt6bKI7cGf6rSL56p85aJw5aJw5aJw5aJw5aJw5aRz5aJw4JNY6bKI/wD//wD/9t/N4JFV
+        5qd45qd45aJw5KBt5KBt5KBt5KBt5KBt5KBt5KBt4ppk4plh4JFV3IRB78ep/wD//wD//wD//wD//wD/
+        /wD/9t/N4JFV4JFV5qd456p84plh4plh4ppk5KBt5KBt56p86bKI5aJw78Wm/wD//wD//wD/67mT4JFV
+        6rWN78Wm56p84ppk4Zdf3otM3YdG78ir/wD//wD/7LyX3opL5KFu5aRz4JJX4ppk/wD//wD//wD/8c6z
+        45xn5aJw78ep78ep56t95aRy5KFu5KFu5KFu5aRy5aJw455p4ZRa3YhH3IRB4plh89W+/wD//wD//wD/
+        /wD//wD/4ZZd6raO78Wm6reQ67qV5KFu4pli4pli4ZVc4plh7L2a45xm4plh9uDQ/wD//wD/3otM4JFV
+        5KBt5KFu5KFu5aJw5KFu5KFu5KFu5KFu5KFu5KFu5KBt5KBt5KFu5aRy5qd46K2B5aRy5qd3/wD//wD/
+        /wD/5aRy4Zdf455p5aRz5qd35qd35aV15aV15qd36K+D6bGG6K+D/wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD/6K+D4JFV6K2B67qV/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD/6rSL89W+67qV6K+E56p856p86K+E56p84ppk4JNY89W+/wD//wD//wD//wD//wD/7sSk/vz6
+        /vz65ql67cGf+ObZ+ObZ5ql63IRB3IRB9uDQ3IRB3IRB7sSk9uDQ7sSk3IRB3IRB3IRB3IRB7sSk/vz6
+        /vz67sSk+u/m/vz6/vz6+u/m7sSk7sSk+u/m7sSk7sSk+ObZ+u/m+ObZ7sSk7sSk7sSk3IRB78ep4ppk
+        9NrG67qV5KBt4ppk5aJw4ppk6rSL////8tC33IRB3IRB3otM4JNY4plh5aRz4ppk3YdG/wD/8tC34JNY
+        7sKh5aRz3otM67qV9t/N56p83YdG4JNY5qd46K+E5qd48tC378ep67qV67qV4plh3YdG7cGf/wD//wD/
+        8tC34ppk4plh5aRz7L2a+Ojc7cCe5aRz5aJw5aJw5aJw4ppk4JFV3YdG3IRB3IRB56p89t/N/wD//wD/
+        78ep9NnE7sOj4JNY4ZVc5KFu5aJw5aJw5aJw5aJw5aJw5ql66K+D6bKI6bKJ5aRz4ZVc/wD//wD//wD/
+        /wD/9t/N7cCe4plh5qd47cGf78ir67qV6K+D5aJw5aJw5aJw5aJw5KBt4JFV7L2a/wD//wD//wD/4JFV
+        6K+E6K+E5aJw5KBt5KBt4ppk4ppk4ppk4ppk4plh4JNY3otM3otM78ep/wD//wD//wD//wD//wD//wD/
+        /wD/67qV3YdG4ppk5qd44JNY4JNY4JNY4ppk6bKI6rSL5aRz5qd456p85aJw9t/N/wD//wD//wD/6K+E
+        5aRy7b+c6K+E4JJX3IRB3oxO7cCe/wD//wD//wD/4pli3oxO5aRz4ppk3IRC56p8/wD//wD//wD//wD/
+        9t/N6K+D6bKI89W+8c+16bKJ5aV15KFu5KFu5J9r45xn4JNY3YdG3IRB6reQ/wD//wD//wD//wD//wD/
+        /wD//wD//wD/5J9r5J9r6K+E5ql6455p4ppk4ZRa3opL3IRC4JFV6bGG/wD//wD//wD//wD/3IRC4ppk
+        56p85aV15KFu5KFu5KFu5J9r45xn45xn45xm5J9r5KBt5KBt5KBt5aJw5qd45qd4455p3otM/wD//wD/
+        /wD/5aV16bKI6K2B5KBt5KFu5KFu5KFu5KFu5KFu5aV16K+D5aV19+PU/wD//wD//wD//wD//wD/8Mqu
+        4ZZd3oxO349T455p56p86K+E5ql65ql678ep/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD/6rSL4ppk6rSL78ir78ir7cGf67qV6bKI5aJw4ppk3IRB3YdG9t/N/wD//wD//wD//wD/7sSk/vz6
+        5ql67cGf+ObZ5ql65ql6+ObZ5ql63IRB/vz69uDQ9uDQ9uDQ/vz69uDQ9uDQ9uDQ3IRB3IRB7sSk/vz6
+        7sSk+u/m9uDQ7sSk7sSk9uDQ+u/m7sSk/vz6+u/m+u/m+u/m/vz6+u/m+u/m9uDQ7sSk3IRB9t/N4plh
+        78ir8c+15qd45aJw5aJw5KBt6rSL////8tC33IRB3YdG4JFV4ppk56p85aRz4JFV6rSL/wD/8tC34plh
+        6K+D4JFV6K+D9t/N6bKI3YdG4JFV4ppk56p86bKI6K+D6K+D89W+78ep5aRz4JFV3IRB7cCe/wD//wD/
+        /wD//wD/89W+7L2a6bKI6bKI78Wm6bKI5KBt5aJw4ppk4plh5KBt6bKI78Wm9t/N/wD//wD//wD//wD/
+        /wD/7sOj4ppk56x/56p85aJw5aJw5aJw5aJw5aJw5aJw5aJw5qd46K+D56x/4plh67mT/wD//wD//wD/
+        /wD//wD//wD/8tC35qd44ppk6bKI8tC38tC367qV56p85aJw4ppk4ppk3otM78ep/wD//wD//wD/6bKI
+        6K+E6rSL5aJw4ppk4ppk4ppk4plh4plh4JNY4JFV3YdG6K+E9NnE/wD//wD//wD//wD//wD//wD//wD/
+        89W+3IRB4JNY5aRz4JFV3YdG3YdG6rSL7cGf5qd47L2a8tC356p85aJw5aJw67qV/wD//wD//wD//wD/
+        7L2a5aV14JNY4JFV5J9r89W//wD//wD/9+TV45xn3opL5aRz5KFu3YlJ4ZRa/wD//wD//wD//wD//wD/
+        /wD//wD/7sOj5qd48Mqu9NnE7cGf56p85KFu4pli349T3IZE3IRC7cGf/wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD/8Mqu5aRy4pli349S3IRC3otM4ZVc56p89NjD/wD//wD//wD//wD//wD/3IRB5qd4
+        7sKh56t95aRy455p45xn45xn4plh4Zdf4plh455p5KBt5KBt5KFu5aJw5aRz5J9r4ZVc5J9r/wD//wD/
+        /wD/56t96bKI6reQ5J9r45xm5KFu5aRz5qd35ql65aV15aJw45xn7L2a/wD//wD//wD//wD//wD/3oxO
+        4Zdf6bKJ6K2B5KFu5aRy5aRz45xn345Q3IRB/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        78Wm4JFV7L2a9t/N5aJw5aJw56p85aJw5aJw4JNY7L2a8tC34ppk4JFV9t/N/wD//wD//wD/7sSk/vz6
+        5ql6+ObZ3IRB/vz6/vz65ql6+ObZ3IRB/vz67sSk9uDQ/vz6/vz6/vz6/vz63IRB+ObZ3IRB7sSk/vz6
+        7sSk/vz67sSk/vz6/vz67sSk/vz67sSk/vz67sSk+u/m/vz6/vz6/vz6/vz67sSk+ObZ3IRB/wD/67qV
+        6K+D////67qV5qd45KBt5KBt6rSL////8tC33otM4JFV4ppk5qd45aJw4JNY3IRB8tC3/wD/8tC34JNY
+        4ppk5aRz9t/N7L2a4JNY5KBt6bKI6K+E5qd45qd45aRz5KBt5qd49t/N67qV3YdG3IRB7cCe/wD//wD/
+        /wD//wD//wD//wD//wD/9NnE5aJw7sKh5aRz4ppk4JNY5qd4/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD/9uDQ4ppk7cCe67mT5aRy5KBt5KBt5KFu5aJw5aJw5aJw5aRy5aRz45xn4ZVc8tK5/wD//wD//wD/
+        /wD//wD//wD//wD//wD/7cGf5aJw5aJw67qV89W+78ir6K+D4plh4JFV3IRB9NnE/wD//wD//wD/7cGf
+        5qd48c+15qd44ppk4plh4JNY4JFV3otM3otM5KBt8c+1/wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        6K+D4JFV4ppk3YdG3IRB4ppk8tC3/wD//wD/9NnE6rSL5aJw6rSL5qd44plh4JFV9NnE/wD//wD//wD/
+        /wD/9d3L7b+c8Myw/wD//wD//wD/89W/45xm349T5KFu5J9r3YhH3oxO78eo/wD//wD//wD//wD//wD/
+        /wD//wD//wD/78eo5aV17cCe9NrG7cCe455p349S3IRB3YhH78ir/wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD/9NnE8c+19NrG/wD//wD//wD//wD//wD//wD//wD//wD/5ql65qd4
+        9NjD78eo56p8455p4plh4JJX3YlJ3oxO4plh56p86K+D5qd45KFu5KFu455p4ZVc3IRB67iS/wD//wD/
+        /wD/8tC35aV15KBt4JFV349T4ZRa4plh4pli45xn45xn4JNY3IZE3opL89S8/wD//wD//wD//wD/9uDQ
+        6rWN6rSL8Mqt5ql65KFu4plh4ZVc5aJw89S8/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/9t/N
+        67qV9t/N/wD/8tC33otM7sKh6bKI4JFV89W+4JFV5aJw/wD//wD/8tC378Wm/wD//wD//wD/7sSk/vz6
+        5ql6+ObZ3IRB/vz6/vz65ql6+ObZ3IRB7sSk/vz67sSk7sSk7sSk7sSk7sSk/vz6+ObZ3IRB7sSk/vz6
+        7sSk/vz67sSk/vz6/vz67sSk/vz67sSk7sSk/vz67sSk7sSk7sSk7sSk7sSk/vz6+ObZ3IRB/wD/9NnE
+        5aJw67qV9NrG6rSL4ppk5KBt6rSL////8tC33otM4ppk5qd45KBt4JFV3YdG6K+D/wD//wD/8tC33otM
+        4ppk89W+78Wm4ppk5qd47cCe8tC37cGf56p84ppk4JFV3otM3YdG5qd49t/N6K+E3IRB78Wm/wD//wD/
+        /wD//wD//wD//wD//wD//wD/4ppk6rSL56p84JNY3otM67qV/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD/8c+156p87sSk6K+D5KFu5KFu5KFu5aJw5aJw5aJw45xn4JNY3IRB7L2a/wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD/9t/N7cGf5aJw5aJw6K+D5qd44JFV3IRB5aRz/wD//wD//wD//wD/89W+
+        4ppk8c+16bKI4plh4JFV3YdG3IRB4ppk78ep/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/78ep
+        3IRB4plh3IRB3otM7cCe/wD//wD//wD//wD//wD//wD/8tC35qd44ppk3otM3IRB67qV/wD//wD//wD/
+        /wD//wD//wD//wD//wD/9NrG5KBt349T3otM45xn345Q3IRB4pli8Mqu/wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD/8tK65qd36bKJ6rWN4ZVc3IRB4pli89S8/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/8tK54pli
+        6reQ78ep6K+E455p349T3IRB349T78ep7LyX45xn6reQ78ir6reQ5KBt4JFV3IRB4plh/wD//wD//wD/
+        /wD//wD//wD/9NrG8Myw67iS6K+D6K+E6K+E6K+E6bGG6bGG56x/5aV178ep/wD//wD//wD//wD//wD/
+        /wD//wD/7sOj6K+E4ZVc56x//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/6rSL5aJw/wD/67qV3otM/wD/8tC33IRB/wD//wD//wD//wD//wD//wD//wD/7sSk/vz6
+        5ql6+ObZ7cGf3IRB3IRB+ObZ7cGf3IRB/vz6/vz6/vz6/vz6/vz6/vz6/vz6/vz6+ObZ3IRB7sSk/vz6
+        7sSk/vz6+u/m7sSk7sSk+u/m+u/m7sSk/vz6/vz6/vz6/vz6/vz6/vz6/vz6/vz6+ObZ3IRB/wD//wD/
+        8c+14ppk6rSL78ir56p84plh6rSL////8tC34JFV67qV6rSL4JFV3IRB5aRz9t/N/wD//wD//wD/7cCe
+        8tC38c+13otM3otM4JNY4plh4plh4plh4JNY4JFV3YdG3IRB3IRB3IRB67qV9t/N67qV9t/N/wD//wD/
+        /wD//wD//wD//wD//wD//wD/6K+D5qd46K+E4JFV3IRB8tC3/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/7cCe6K2B6bKJ56p85qd45qd45qd45ql645xn4JNY3IRB5ql6/wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD/9t/N78Wm5qd44JFV3YdG3IRB78ep/wD//wD//wD//wD//wD/
+        6bKI4ppk4ppk3otM3IRB4ppk78ep/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/7cGf
+        3YdG3IRB67qV9NnE/wD//wD//wD//wD//wD//wD//wD//wD//wD/78Wm4JNY3IRB6K+D/wD//wD//wD/
+        /wD//wD//wD//wD//wD/9+LS6reQ5aV156p85qd456t97cGf/wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD/9d3L6K+E4JNY3IRB6K+E/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/78Wm
+        5J9r4ppk4pli3oxO3IRB45xm9dvI/wD//wD/8tK545xn5KBt5aRz345Q3IRB4ZVc89fB/wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD/9NnE5aV13otM7sOj/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/5KBt9t/N/wD/8tC35aJw/wD//wD/67qV8tC3/wD//wD//wD//wD//wD//wD/7cGf5aJw
+        5aJw5ql6+ObZ5ql6+ObZ7cGf3IRB5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw3IRB7cGf5aJw
+        5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw5aJw3IRB/wD//wD/
+        /wD/78ep5aJw5qd46K+D4JNY6K+E8tC378Wm5KBt5aJw4JFV3IRB5aRz9t/N/wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD/7cGf4ppk5KBt3YdG3YdG/wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD/6bKI5aRy56p85aV15aRy5KFu45xn4JJX3IZE6rWN/wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/8tC37cCe7cGf/wD//wD//wD//wD//wD//wD/
+        89W+5aJw4JNY67qV8tC3/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/9NnE
+        7cGf8tC3/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/9t/N8tC389W+/wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD/67qV7LyX/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        89S867qV56p86bKI78eo/wD//wD//wD//wD//wD/9+LS7sOj6bGG6K2B7LyX/wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/4ZZd3IRB/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/89W+/wD//wD/9t/N67qV/wD//wD//wD/8tC3/wD//wD//wD//wD//wD//wD/7cGf8c6z
+        8c6z8c6z5ql68c6z5ql65ql68c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z3IRB7cGf8c6z
+        8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z8c6z3IRB/wD//wD/
+        /wD//wD/9NnE67qV4JNY4JNY3otM3otM4JNY4JFV3otM4JNY7cGf/wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD/9t/N4JNY4JFV3IRB6rSL/wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD/9uDQ5aJw4plh4plh4ZRa4JFV3YhH45xm78ep/wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD/9t/N89W//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD/8tC3/wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/7cGf7cGf
+        7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf3IRB7cGf7cGf
+        7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf7cGf3IRB/wD//wD/
+        /wD//wD//wD//wD/9NnE78Wm7cCe6bKI6bKI7cGf8c+1/wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD//wD//wD/78ep3otM4plh9t/N/wD//wD//wD//wD//wD//wD//wD//wD//wD/
+        /wD//wD//wD//wD//wD/8tK66rSL6bKI6bGG7b+c8tC3/wD//wD//wD//wD//wD//wD//wD/
+</value>
+  </data>
+  <data name="MenuFilePrint">
+    <value>&amp;Print...</value>
+  </data>
+  <data name="MenuEditCopy">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="LabelImportExportWhat">
+    <value>What would you like to do?</value>
+  </data>
+  <data name="MenuFileSendShortcut">
+    <value>&amp;Shortcut to Desktop</value>
+  </data>
+  <data name="MenuViewGoToSearchPage">
+    <value>&amp;Search Page</value>
+  </data>
+  <data name="ButtonCancel">
+    <value>Cancel</value>
+  </data>
+  <data name="LabelExportFavourites">
+    <value>&amp;Export Favourites</value>
+  </data>
+  <data name="DialogAbout">
+    <value>About Nikhil's WebBrowser</value>
+  </data>
+  <data name="MenuFile">
+    <value>&amp;File</value>
+  </data>
+  <data name="MenuViewRefresh">
+    <value>&amp;Refresh</value>
+  </data>
+  <data name="LabelOpen">
+    <value>&amp;Open: </value>
+  </data>
+  <data name="MenuEdit">
+    <value>&amp;Edit</value>
+  </data>
+  <data name="MenuFileImportExport">
+    <value>&amp;Import and Export...</value>
+  </data>
+  <data name="MenuHelpAbout">
+    <value>&amp;About...</value>
+  </data>
+  <data name="MenuFileProperties">
+    <value>&amp;Properties</value>
+  </data>
+  <data name="MenuFileWorkOffline">
+    <value>&amp;Work Offline</value>
+  </data>
+  <data name="MenuFileSendPage">
+    <value>&amp;Page by E-mail...</value>
+  </data>
+  <data name="ButtonOK">
+    <value>OK</value>
+  </data>
+  <data name="MenuFileSave">
+    <value>&amp;Save</value>
+  </data>
+  <data name="MenuFileClose">
+    <value>&amp;Close</value>
+  </data>
+  <data name="MenuView">
+    <value>&amp;View</value>
+  </data>
+  <data name="MenuViewStop">
+    <value>Sto&amp;p</value>
+  </data>
+  <data name="DialogImportExport">
+    <value>Import and Export</value>
+  </data>
+  <data name="LabelOpenText">
+    <value>Type the address of a document, and Techinox WebBrowser will open it for you.</value>
+  </data>
+  <data name="MenuFileOpen">
+    <value>&amp;Open...</value>
+  </data>
+  <data name="MenuViewSource">
+    <value>Sour&amp;ce</value>
+  </data>
+  <data name="MenuFileSend">
+    <value>S&amp;end</value>
+  </data>
+  <data name="MenuViewTextSizeLargest">
+    <value>Lar&amp;gest</value>
+  </data>
+  <data name="MenuFileNewWindow">
+    <value>&amp;Window</value>
+  </data>
+  <data name="MenuViewGoToBack">
+    <value>&amp;Back</value>
+  </data>
+  <data name="ButtonBrowse">
+    <value>&amp;Browse...</value>
+  </data>
+  <data name="MenuFavouritesOrganise">
+    <value>&amp;Organise Favourites...</value>
+  </data>
+  <data name="MenuViewTextSizeSmallest">
+    <value>Sm&amp;allest</value>
+  </data>
+  <data name="LabelImportExportDescription">
+    <value>Import and Export allows you to easily import Bookmarks from Netscape browsers and also export Internet Explorer Favourites to Netscape browsers.</value>
+  </data>
+  <data name="MenuViewFullScreen">
+    <value>&amp;Full Screen</value>
+  </data>
+  <data name="MenuFileSendLink">
+    <value>&amp;Link by E-mail...</value>
+  </data>
+  <data name="MenuViewTextSize">
+    <value>Te&amp;xt Size</value>
+  </data>
+  <data name="MenuToolsInternetOptions">
+    <value>Internet &amp;Options...</value>
+  </data>
+  <data name="IconGo" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhDwAQAPcAAAAAAC1fAC2YAC3KXy37X8r7mP39/fv7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
+        +yH5BAEAAAYALAAAAAAPABAAAAhaAA0IHEiwoEGBAQ4eDABAYcEABxo6DEDxQAGJDyEesEiAAEaEGwt0
+        7DhAAEaIIgUIGMDSJMEABQYAmAmg5EeIMgcCcPnyIsGZBgN4/LlwqEOEOY8K3PlR6dGAADs=
+</value>
+  </data>
+  <data name="MenuViewToolbarsStandard">
+    <value>&amp;Standard Buttons</value>
+  </data>
+  <data name="MenuViewTextSizeMedium">
+    <value>&amp;Medium</value>
+  </data>
+  <data name="LabelImportBookmarks">
+    <value>&amp;Import Bookmarks</value>
+  </data>
+  <data name="MenuFileEdit">
+    <value>E&amp;dit</value>
+  </data>
+  <data name="DialogOpen">
+    <value>Open</value>
+  </data>
+  <data name="MenuViewGoToHomePage">
+    <value>&amp;Home Page</value>
+  </data>
+  <data name="AppIcon" type="System.Drawing.Icon, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAAAAACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAAAAAAAAAAAAEAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAMDcwADwyqYAzP//AJn//wBm//8AM///AP/M
+        /wDMzP8Amcz/AGbM/wAzzP8AAMz/AP+Z/wDMmf8AmZn/AGaZ/wAzmf8AAJn/AP9m/wDMZv8AmWb/AGZm
+        /wAzZv8AAGb/AP8z/wDMM/8AmTP/AGYz/wAzM/8AADP/AMwA/wCZAP8AZgD/ADMA/wD//8wAzP/MAJn/
+        zABm/8wAZv/MADP/zAAA/8wA/8zMAMzMzACZzMwAZszMADPMzAAAzMwA/5nMAMyZzACZmcwAZpnMADOZ
+        zAAAmcwA/2bMAMxmzACZZswAZmbMADNmzAAAZswA/zPMAMwzzACZM8wAZjPMADMzzAAAM8wA/wDMAMwA
+        zACZAMwAZgDMADMAzAAAAMwA//+ZAMz/mQCZ/5kAZv+ZADP/mQAA/5kA/8yZAMzMmQCZzJkAZsyZADPM
+        mQAAzJkA/5mZAMyZmQCZmZkAZpmZADOZmQAAmZkA/2aZAMxmmQCZZpkAZmaZADNmmQAAZpkA/zOZAMwz
+        mQCZM5kAZjOZADMzmQAAM5kA/wCZAMwAmQCZAJkAZgCZADMAmQAAAJkA//9mAMz/ZgCZ/2YAZv9mADP/
+        ZgAA/2YA/8xmAMzMZgCZzGYAZsxmADPMZgAAzGYA/5lmAMyZZgCZmWYAZplmADOZZgAAmWYA/2ZmAMxm
+        ZgCZZmYAZmZmADNmZgAAZmYA/zNmAMwzZgCZM2YAZjNmADMzZgAAM2YA/wBmAMwAZgCZAGYAZgBmADMA
+        ZgAAAGYA//8zAMz/MwCZ/zMAZv8zADP/MwAA/zMA/8wzAMzMMwCZzDMAZswzADPMMwAAzDMA/5kzAMyZ
+        MwCZmTMAZpkzADOZMwAAmTMA/2YzAMxmMwCZZjMAZmYzADNmMwAAZjMA/zMzAMwzMwCZMzMAZjMzADMz
+        MwAAMzMA/wAzAMwAMwCZADMAZgAzADMAMwAAADMAzP8AAJn/AABm/wAAM/8AAP/MAADMzAAAmcwAAGbM
+        AAAzzAAAAMwAAP+ZAADMmQAAmZkAAGaZAAAzmQAAAJkAAP9mAADMZgAAmWYAAGZmAAAAZgAAM2YAAP8z
+        AADMMwAAmTMAAGYzAAAzMwAAADMAAMwAAACZAAAAZgAAADMAAAAAAN0AAAC7AAAAqgAAAIgAAAB3AAAA
+        VQAAAEQAAAAiAADdAAAAuwAAAKoAAACIAAAAdwAAAFUAAABEAAAAIgAA3d3dAFVVVQB3d3cAd3d3AERE
+        RAAiIiIAERERAHcAAABVAAAARAAAACIAAADw+/8ApKCgAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
+        AAD///8AAAAAAAAAAAAAAABWgavO2trasuxWAAAAAAAAAAAAAAAAAAAAAAAAAFaA1NXV1fX19fX19dXU
+        h1wAAAAAAAAAAAAAAAAAAACA1NXU1dra9PT09Nr11dTV1YcAAAAAAAAAAAAAAABWpdTU1NXa2vTa9Nr0
+        9Nra1NTU1bL3AAAAAAAAAAAAXKvV1NTV2vTV1dXV1fT02trV1NTU1bJcAAAAAAAAAACy1NTU9PP09NXU
+        1NXV1dr02tXV1NTU1LIAAAAAAAAAq9TNztTz1M7O1NTU1M7V2vT01dXU1NTU1KsAAAAAAHrUzc7z2dTU
+        1NTZ2fPU1NTa9NrV1dTU1NTU1YcAAABVx83N1PPNzfLy2dnZ2dnU1PTa9NXU1NTU1NTU1VwAAIDOzfTU
+        8tPT2PLy8tnz8tTZ9Nra1dTU1NTU1NXVhwAxzc7U083T2NjT09Py8tnUzdTZ9NXUztTU1NTV9PTVMl3N
+        9NPT09jT083T09jy2dPN0/LU1M7O1NTU1PT09PX3gfLYzdPY083Gzc3T09jY083U2dTNzs7U1NT09PTa
+        1eyl2NLT08zGwMDGx83Y2NjY2fPa1M3N1NTU89r19drVssfTzNPMxsbAwMDM09jTzNPY1NTNzc3T1NT0
+        1dr12tXax9LX0sDAxsbAwMzT2M3GzdjNxs3N09PY2fXV1fXa1fXH0szGxsbGxr/GzNLS0szT083GzdPT
+        0/LU1NTV2tXV9c7Mxb/Gzc3Gv8XS0tLS19PNzczN09jY1M7H1PT01fXaq8a/xs3Nxr/Fo6mvqtLY08zM
+        0tPT09PNzcfU2tXV9bOAxsXM083G/qOphYWGsLHSy9LS2PLNx8fHzfT01dr17FbGxtPTzL/FqX9PT1t/
+        o8vR0tPTzcfGxsfU2dTU9fVdMc3M09PFxcujeU8qKk95qfzT1M3AwMDGzdT0zvPa1esAgMzTxcXF0aNz
+        TyoqT3+p083GwMDAwMbU9NTU2vWBAABWzcXFxdLFxZ15T09Pf6rNwL+/wMDGzfLUzvTa1FYAAAB6xsXR
+        0cvF0aOdf6mknv7+/v7+wMfU2c7U9NmHAAAAADGx2NfX0tjT0svSqr/+/v7+/r/A09nU0/TzsesAAAAA
+        AFyx2MbS08zM0szG/v7+/v7+wM3yzc3z1LFWAAAAAAAAAFyx0tLLv9LTxv7+/v7+/r/N8tTU1NOxXAAA
+        AAAAAAAAAFyrx8bL2MzA/v7+/v6/zNPT9NjYsFYAAAAAAAAAAAAAADF68tPT2NTNzcbMzMzM1Nny04br
+        AAAAAAAAAAAAAAAAAABWh9XNzdPR0dHM09PT1IZVAAAAAAAAAAAAAAAAAAAAAAAAMl2Hsc3y2c2xhlwx
+        AAAAAAAAAAAAAP/gB///AAD//gAAf/gAAB/wAAAP8AAAD+AAAAfAAAADgAAAAYAAAAEAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAABgAAAAcAAAAPAAAAD4AAAB/AA
+        AA/4AAAf/AAAP/8AAP//wAP/
+</value>
+  </data>
+  <data name="MenuEditSelectAll">
+    <value>Select &amp;All</value>
+  </data>
+  <data name="MenuEditCut">
+    <value>Cu&amp;t</value>
+  </data>
+  <data name="MenuFavouritesAdd">
+    <value>&amp;Add to Favourites...</value>
+  </data>
+  <data name="MenuViewTextSizeSmaller">
+    <value>&amp;Smaller</value>
+  </data>
+  <data name="MenuEditPaste">
+    <value>&amp;Paste</value>
+  </data>
+  <data name="MenuFileNew">
+    <value>&amp;New</value>
+  </data>
+  <data name="MenuFileSaveAs">
+    <value>Save &amp;As...</value>
+  </data>
+  <data name="MenuViewGoTo">
+    <value>G&amp;o To</value>
+  </data>
+  <data name="AppTitle">
+    <value>Nikhil's WebBrowser</value>
+  </data>
+  <data name="MenuHelp">
+    <value>&amp;Help</value>
+  </data>
+  <data name="AppCopyright">
+    <value>Copyright (C) 2001 Nikhil Dabas</value>
+  </data>
+  <data name="MenuFilePrintPreview">
+    <value>Print Pre&amp;view...</value>
+  </data>
+  <data name="MenuEditFind">
+    <value>&amp;Find (on this page)...</value>
+  </data>
+  <data name="MenuFilePageSetup">
+    <value>Page Set&amp;up...</value>
+  </data>
+  <data name="MenuViewGoToForward">
+    <value>&amp;Forward</value>
+  </data>
+  <data name="MenuViewToolbars">
+    <value>&amp;Toolbars</value>
+  </data>
+  <data name="LabelImportExportWhere">
+    <value>&amp;Filename:</value>
+  </data>
+  <data name="MenuViewTextSizeLarger">
+    <value>&amp;Larger</value>
+  </data>
+  <data name="MenuFileNewMessage">
+    <value>&amp;Message</value>
+  </data>
+  <data name="MenuViewToolbarsCustomize">
+    <value>&amp;Customize...</value>
+  </data>
+</root>

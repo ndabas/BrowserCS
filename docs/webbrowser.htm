@@ -1,351 +1,210 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:w="urn:schemas-microsoft-com:office:word"
-xmlns="http://www.w3.org/TR/REC-html40">
+<!-- Article Starts -->
 
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=ProgId content=Word.Document>
-<meta name=Generator content="Microsoft Word 9">
-<meta name=Originator content="Microsoft Word 9">
-<link rel=File-List href="./webbrowser/filelist.xml">
-<link rel=Edit-Time-Data href="./webbrowser/editdata.mso">
-<!--[if !mso]>
-<style>
-v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-w\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style>
-<![endif]-->
-<title>A Web Browser in C#</title>
-<!--[if gte mso 9]><xml>
- <o:DocumentProperties>
-  <o:Author>Nikhil Dabas</o:Author>
-  <o:Template>Normal</o:Template>
-  <o:LastAuthor>Nikhil Dabas</o:LastAuthor>
-  <o:Revision>1</o:Revision>
-  <o:TotalTime>73</o:TotalTime>
-  <o:Created>2001-05-09T19:03:00Z</o:Created>
-  <o:LastSaved>2001-05-09T20:16:00Z</o:LastSaved>
-  <o:Pages>3</o:Pages>
-  <o:Words>832</o:Words>
-  <o:Characters>4747</o:Characters>
-  <o:Company>Unknown Organization</o:Company>
-  <o:Lines>39</o:Lines>
-  <o:Paragraphs>9</o:Paragraphs>
-  <o:CharactersWithSpaces>5829</o:CharactersWithSpaces>
-  <o:Version>9.3821</o:Version>
- </o:DocumentProperties>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <w:WordDocument>
-  <w:HideGrammaticalErrors/>
-  <w:ActiveWritingStyle Lang="EN-GB" VendorID="64" DLLVersion="131077"
-   NLCheck="1">1</w:ActiveWritingStyle>
-  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
-  <w:DisplayHorizontalDrawingGridEvery>2</w:DisplayHorizontalDrawingGridEvery>
-  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
- </w:WordDocument>
-</xml><![endif]-->
-<style>
-<!--
- /* Font Definitions */
-@font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;
-	mso-font-charset:2;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:0 268435456 0 0 -2147483648 0;}
-@font-face
-	{font-family:Verdana;
-	panose-1:2 11 6 4 3 5 4 4 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:647 0 0 0 159 0;}
- /* Style Definitions */
-p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{mso-style-parent:"";
-	margin:0in;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	font-size:10.0pt;
-	mso-bidi-font-size:12.0pt;
-	font-family:Verdana;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";}
-h1
-	{mso-style-next:Normal;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:0in;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	font-size:16.0pt;
-	font-family:Arial;
-	mso-font-kerning:16.0pt;}
-h2
-	{mso-style-next:Normal;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:0in;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:2;
-	font-size:14.0pt;
-	font-family:Arial;
-	font-style:italic;}
-a:link, span.MsoHyperlink
-	{color:blue;
-	text-decoration:underline;
-	text-underline:single;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:purple;
-	text-decoration:underline;
-	text-underline:single;}
-pre
-	{margin:0in;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	tab-stops:.5in;
-	background:silver;
-	font-size:10.0pt;
-	font-family:"Courier New";
-	mso-fareast-font-family:"Times New Roman";}
-@page Section1
-	{size:595.45pt 841.7pt;
-	margin:1.0in 1.25in 92.15pt 1.25in;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;
-	mso-paper-source:0;}
-div.Section1
-	{page:Section1;}
- /* List Definitions */
-@list l0
-	{mso-list-id:116220917;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-811452540 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l0:level1
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0B7;
-	mso-level-tab-stop:.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:Symbol;}
-@list l1
-	{mso-list-id:649748568;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-1412382464 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l2
-	{mso-list-id:1507012800;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-712474070 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l2:level1
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0B7;
-	mso-level-tab-stop:.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:Symbol;}
-@list l3
-	{mso-list-id:1799445631;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-263675900 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l3:level1
-	{mso-level-tab-stop:.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
--->
-</style>
-</head>
-
-<body lang=EN-GB link=blue vlink=purple style='tab-interval:.5in'>
-
-<div class=Section1>
+<!-- Download Links -->
+<ul class=download>
+<li><a href='webbrowser/webbrowser_src.zip'>Download source files - 26.0 Kb</a></li>
+</ul>
 
 <h1>A Web Browser in C#</h1>
 
-<p class=MsoNormal>This article describes creating a web browser completely in
-C#. The application basically hosts a Microsoft WebBrowser Control and uses the
-functions it provides for all control. Here is a screenshot: <!--[if gte vml 1]><v:shapetype
- id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
- path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
- <v:stroke joinstyle="miter"/>
- <v:formulas>
-  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
-  <v:f eqn="sum @0 1 0"/>
-  <v:f eqn="sum 0 0 @1"/>
-  <v:f eqn="prod @2 1 2"/>
-  <v:f eqn="prod @3 21600 pixelWidth"/>
-  <v:f eqn="prod @3 21600 pixelHeight"/>
-  <v:f eqn="sum @0 0 1"/>
-  <v:f eqn="prod @6 1 2"/>
-  <v:f eqn="prod @7 21600 pixelWidth"/>
-  <v:f eqn="sum @8 21600 0"/>
-  <v:f eqn="prod @7 21600 pixelHeight"/>
-  <v:f eqn="sum @10 21600 0"/>
- </v:formulas>
- <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
- <o:lock v:ext="edit" aspectratio="t"/>
-</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:415.5pt;
- height:336.75pt'>
- <v:imagedata src="./webbrowser/image001.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img width=554 height=449
-src="./webbrowser/image002.jpg" v:shapes="_x0000_i1025"><![endif]></p>
+<p>This article describes creating a web browser completely in
+C#. The application hosts a Microsoft WebBrowser Control and uses the
+functions it provides for all control. Here is a screenshot:<br />
+<img width=481 height=439 src="webbrowser/screencap.jpg" /></p>
 
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
-
-<p class=MsoNormal>A lot of the functions do not work yet; most require some
+<p>A lot of the functions do not work yet; most require some
 non-.NET programming to work. I stuck to pure .NET programming for this app,
 because it is meant to demonstrate features of the .NET Framework and not some
 APIs.</p>
 
 <h2>Building the Web Browser</h2>
 
-<p class=MsoNormal>Before you begin, you must generate some assemblies from the
+<p>Before you begin, you must generate some assemblies from the
 WebBrowser typlibs, so that they can be used in our code. Typlibs must be
 imported for:</p>
 
-<ul style='margin-top:0in' type=disc>
- <li class=MsoNormal style='mso-list:l2 level1 lfo1;tab-stops:list .5in'>The
-     WebBrowser control itself.</li>
- <li class=MsoNormal style='mso-list:l2 level1 lfo1;tab-stops:list .5in'>MSHTML.DLL,
-     if you plan to access the DHTML Object Model of the document.</li>
+<ul>
+ <li>The WebBrowser control itself, which is in SHDocVw.dll.</li>
+ <li>mshtml.tlb, if you plan to access the DHTML Object Model of the document.</li>
 </ul>
 
-<p class=MsoNormal>This step is easy. At a command prompt, in a folder you
+<p>This step is easy. At a command prompt, in a folder you
 create for this project, type:</p>
 
-<pre>aximp c:\windows\system\shdocvw.dll</pre><pre>tlbimp mshtml.tlb</pre>
+<pre>
+aximp c:\windows\system\shdocvw.dll
+tlbimp mshtml.tlb
+</pre>
 
-<p class=MsoNormal>The aximp command should generate two files: AxSHDocVw.dll
-and SHDocVw.dll. We used aximp because we want to use an ActiveX control in the
-project. The tlbimp command should generate MSHTML.dll, which contains
-definitions for the DHTML DOM interfaces.</p>
+<p>The aximp command should generate two files: AxSHDocVw.dll
+and SHDocVw.dll. The tlbimp command should generate MSHTML.dll, which contains
+definitions for the DHTML DOM interfaces, along with about 3000 other types,
+so it might take a while to import.</p>
 
-<p class=MsoNormal>Now you can proceed in several ways: You can do all coding
-by hand, or you can use a tool like windes.exe or Visual Studio.NET. Basically,
+<p>Now you can proceed in several ways: You can do all coding
+by hand, or you can use Visual Studio.NET. I have done it the 'SDK way'. Basically,
 you have to create a form with:</p>
 
-<ul style='margin-top:0in' type=disc>
- <li class=MsoNormal style='mso-list:l0 level1 lfo2;tab-stops:list .5in'>The
-     WebBrowser control itself.</li>
- <li class=MsoNormal style='mso-list:l0 level1 lfo2;tab-stops:list .5in'>A
-     toolbar.</li>
- <li class=MsoNormal style='mso-list:l0 level1 lfo2;tab-stops:list .5in'>A
-     status bar. You can add panels for the status message, a progress bar,
-     offline and secure icons, and a zone indicator.</li>
- <li class=MsoNormal style='mso-list:l0 level1 lfo2;tab-stops:list .5in'>An
-     address bar. This should be a panel with a label, a combo box, and a Go
+<ul>
+ <li>The WebBrowser control itself.</li>
+ <li>A toolbar. Note that not all buttons on the toolbar work as you
+     might expect them to.</li>
+ <li>A status bar. You can add panels for the status message, a progress bar,
+     offline and secure icons, and a zone indicator. I've added these controls
+     as placeholders only, they don't work (yet).</li>
+ <li>An address bar. This should be a panel with a label, a combo box, and a Go
      button.</li>
- <li class=MsoNormal style='mso-list:l0 level1 lfo2;tab-stops:list .5in'>A main
-     menu for the app.</li>
- <li class=MsoNormal style='mso-list:l0 level1 lfo2;tab-stops:list .5in'>Image
-     lists for the toolbar.</li>
+ <li>A main menu for the application.</li>
+ <li>An image list for the toolbar.</li>
 </ul>
 
-<p class=MsoNormal>Most of the initialisation code shall be added for you and
+<p>Most of the initialisation code shall be added for you and
 little work needs to be done here. You must remember to add event handlers for
 the WebBrowser control, the status bar, the menus, the toolbar, the address
 combo box, and the Go button. All this code is present in the file
 WebBrowser.cs. In addition, extra dialogs are included in About.cs,
 ImportExport.cs, and Open.cs.</p>
 
-<p class=MsoNormal>In the WebBrowser.cs file, you must put in the following
+<p>In the WebBrowser.cs file, you must put in the following
 statements in the namespace:</p>
 
-<pre>namespace Techinox.WebBrowser</pre><pre>{</pre><pre><span style="mso-spacerun: yes">  </span></pre><pre><span style="mso-spacerun: yes">  </span>using System;</pre><pre><span style="mso-spacerun: yes">  </span>using Microsoft.Win32;</pre><pre><span style="mso-spacerun: yes">  </span>using System.Drawing;</pre><pre><span style="mso-spacerun: yes">  </span>using System.ComponentModel;</pre><pre><span style="mso-spacerun: yes">  </span>using System.WinForms;</pre><pre><span style="mso-spacerun: yes">  </span>using AxSHDocVw;</pre><pre><span style="mso-spacerun: yes">  </span>using MSHTML;</pre><pre><span style="mso-spacerun: yes">  </span>using System.Runtime.InteropServices;</pre><pre><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></pre><pre><span style="mso-spacerun: yes">  </span>public class WebBrowserForm : System.WinForms.Form</pre><pre><span style="mso-spacerun: yes">  </span>{</pre><pre><i>// Other stuff…<o:p></o:p></i></pre>
+<pre>
+namespace ND.WebBrowser
+{
+  
+  using System;
+  using System.Drawing;
+  using System.ComponentModel;
+  using System.Windows.Forms;
+  using Microsoft.Win32;
+  using AxSHDocVw;
+  using MSHTML;
+  
+  // etc..
+</pre>
 
-<p class=MsoNormal>Notice SHDocVw is not included; this causes conflicts with
+<p>Microsoft.Win32 is required because the application loads the URL MRU
+list from the registry. you can remove the MSHTML reference if you
+do not need it.</p>
+
+<p>Notice SHDocVw is not included; this causes conflicts with
 the definitions in AxSHDocVw.dll. Most of the code is simple and calls
 functions of the WB control. </p>
 
 <h2>Menus and Toolbars</h2>
 
-<p class=MsoNormal>The menu and the toolbar are standard WinForms stuff. Menu
+<p>The menu and the toolbar are standard Windows Forms stuff. Menu
 popup events are handled to update the enabled/disabled and checked state of
 menu items. For example:</p>
 
-<pre>protected void mnuFile_Popup(object sender, EventArgs e)</pre><pre><span style="mso-spacerun: yes">    </span>{</pre><pre><span style="mso-spacerun: yes">      </span>MenuItem miFile = m_mnuMain.MenuItems[0];</pre><pre><span style="mso-spacerun: yes">      </span>miFile.MenuItems[14].Checked = m_axWebBrowser.Offline;</pre><pre><span style="mso-spacerun: yes">      </span>Int32 nEnabledTest = SHDocVw.OLECMDF.OLECMDF_SUPPORTED.ToInt32()</pre><pre><span style="mso-spacerun: yes">        </span>+ SHDocVw.OLECMDF.OLECMDF_ENABLED.ToInt32();<span style="mso-spacerun: yes">      </span></pre><pre><span style="mso-spacerun: yes">      </span>miFile.MenuItems[2].Enabled = (m_axWebBrowser.QueryStatusWB //Refresh test for Edit</pre><pre><span style="mso-spacerun: yes">        </span>(SHDocVw.OLECMDID.OLECMDID_REFRESH).ToInt32() == nEnabledTest);</pre><pre><span style="mso-spacerun: yes">      </span>miFile.MenuItems[3].Enabled = (m_axWebBrowser.QueryStatusWB</pre><pre><span style="mso-spacerun: yes">        </span>(SHDocVw.OLECMDID.OLECMDID_SAVE).ToInt32() == nEnabledTest);</pre><pre><span style="mso-spacerun: yes">      </span>miFile.MenuItems[4].Enabled = (m_axWebBrowser.QueryStatusWB</pre><pre><span style="mso-spacerun: yes">        </span>(SHDocVw.OLECMDID.OLECMDID_SAVEAS).ToInt32() == nEnabledTest);</pre><pre><span style="mso-spacerun: yes">      </span>miFile.MenuItems[6].Enabled = (m_axWebBrowser.QueryStatusWB</pre><pre><span style="mso-spacerun: yes">        </span>(SHDocVw.OLECMDID.OLECMDID_PAGESETUP).ToInt32() == nEnabledTest);</pre><pre><span style="mso-spacerun: yes">      </span>miFile.MenuItems[7].Enabled = (m_axWebBrowser.QueryStatusWB</pre><pre><span style="mso-spacerun: yes">        </span>(SHDocVw.OLECMDID.OLECMDID_PRINT).ToInt32() == nEnabledTest);</pre><pre><span style="mso-spacerun: yes">      </span>miFile.MenuItems[8].Enabled = (m_axWebBrowser.QueryStatusWB</pre><pre><span style="mso-spacerun: yes">        </span>(SHDocVw.OLECMDID.OLECMDID_PRINTPREVIEW).ToInt32() == nEnabledTest);</pre><pre><span style="mso-spacerun: yes">      </span>miFile.MenuItems[13].Enabled = (m_axWebBrowser.QueryStatusWB</pre><pre><span style="mso-spacerun: yes">        </span>(SHDocVw.OLECMDID.OLECMDID_PROPERTIES).ToInt32() == nEnabledTest);</pre><pre><span style="mso-spacerun: yes">    </span>}</pre>
+<pre>
+protected void mnuFile_Popup(object sender, EventArgs e)
+    {
+      MenuItem miFile = MenuMain.MenuItems[0];
+      miFile.MenuItems[14].Checked = AxWebBrowser.Offline;
+      
+      Int32 EnabledTest = Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_SUPPORTED)
+          + Convert.ToInt32(SHDocVw.OLECMDF.OLECMDF_ENABLED);
+      
+      miFile.MenuItems[2].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB //Refresh test for Edit
+        (SHDocVw.OLECMDID.OLECMDID_REFRESH));
+      miFile.MenuItems[3].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_SAVE));
+      miFile.MenuItems[4].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_SAVEAS));
+      miFile.MenuItems[6].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_PAGESETUP));
+      miFile.MenuItems[7].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_PRINT));
+      miFile.MenuItems[8].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_PRINTPREVIEW));
+      miFile.MenuItems[13].Enabled = EnabledTest.Equals(AxWebBrowser.QueryStatusWB
+        (SHDocVw.OLECMDID.OLECMDID_PROPERTIES));
+    }
+</pre>
 
-<p class=MsoNormal>First, the File menu object is obtained. Then the WB control
+<p>First, the File menu object is obtained. Then the WB control
 is used to check the enabled status of commands in the menu. If you are
 familiar with COM programming, this should be standard code. Otherwise, read
-the WB control documentation at <a
-href="http://msdn.microsoft.com/workshop/browser/webbrowser/reference/Objects/WebBrowser.asp">http://msdn.microsoft.com/workshop/browser/webbrowser/reference/Objects/WebBrowser.asp</a>.
+the WebBrowser control documentation at <a
+href="http://msdn.microsoft.com/library/default.asp?url=/workshop/browser/webbrowser/reference/Objects/WebBrowser.asp">MSDN: WebBrowser</a>.
 Most commands are also executed in the standard COM IOleCommandTarget way, like
 this:</p>
 
-<pre><span style="mso-spacerun: yes">    </span>protected void mnuFileSave_Click(object sender, EventArgs e)</pre><pre><span style="mso-spacerun: yes">    </span>{</pre><pre><span style="mso-spacerun: yes">      </span>Object o = null;</pre><pre><span style="mso-spacerun: yes">      </span>m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_SAVE,</pre><pre><span style="mso-spacerun: yes">        </span>SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_DODEFAULT,</pre><pre><span style="mso-spacerun: yes">        </span>ref o, ref o);</pre><pre><span style="mso-spacerun: yes">    </span>}</pre>
+<pre>
+    protected void mnuFileSave_Click(object sender, EventArgs e)
+    {
+      Object o = null;
+      m_axWebBrowser.ExecWB(SHDocVw.OLECMDID.OLECMDID_SAVE,
+        SHDocVw.OLECMDEXECOPT.OLECMDEXECOPT_DODEFAULT,
+        ref o, ref o);
+    }
+</pre>
 
-<p class=MsoNormal>A null object reference is passed for the input and output
+<p>A null object reference is passed for the input and output
 arguments of the ExecWB method. Simply because we have no arguments to pass.
-Some menu commands use methods of the WB control itself, like Home and Search.
-The other source files have other dialogs, which are shown with standard
-WinForms code.</p>
+Some menu commands use methods of the WebBrowser control itself, like Home and Search.
+The other source files have other dialogs, like the Import & Export dialog.</p>
 
-<pre><span style="mso-spacerun: yes">    </span>protected void mnuFileOpen_Click(object sender, EventArgs e)</pre><pre><span style="mso-spacerun: yes">    </span>{</pre><pre><span style="mso-spacerun: yes">      </span>OpenForm frmOpen = new OpenForm();</pre><pre><span style="mso-spacerun: yes">      </span>frmOpen.ShowDialog(this);</pre><pre><span style="mso-spacerun: yes">      </span>if(frmOpen.DialogResult == DialogResult.OK)</pre><pre><span style="mso-spacerun: yes">      </span>{</pre><pre><span style="mso-spacerun: yes">        </span>Object o = null;</pre><pre><span style="mso-spacerun: yes">        </span>m_axWebBrowser.Navigate(frmOpen.m_sAddress, ref o, ref o, ref o, ref o);</pre><pre><span style="mso-spacerun: yes">      </span>}</pre><pre><span style="mso-spacerun: yes">    </span>}</pre>
+<pre>
+protected void mnuFileOpen_Click(object sender, EventArgs e)
+    {
+      OpenForm frmOpen = new OpenForm();
+      frmOpen.ShowDialog(this);
+      if(frmOpen.DialogResult == DialogResult.OK)
+      {
+        Object o = null;
+        AxWebBrowser.Navigate(frmOpen.Address, ref o, ref o, ref o, ref o);
+      }
+    }
+</pre>
 
-<p class=MsoNormal>The Import and Export dialog uses the ShellUIHelper object,
+<p>The Import and Export dialog uses the ShellUIHelper object,
 documented at <a
-href="http://msdn.microsoft.com/workshop/browser/external/overview/overview.asp">http://msdn.microsoft.com/workshop/browser/external/overview/overview.asp</a>.
+href="http://msdn.microsoft.com/library/default.asp?url=/workshop/browser/external/overview/overview.asp">MSDN: Shell Helper API</a>.
 </p>
 
 <h2>Editing the Document</h2>
 
-<p class=MsoNormal>Instead of calling an external editor, all editing is done
-by the WB control itself, using a new IE 5.5 feature which allows documents to
+<p>Instead of calling an external editor, all editing is done
+by the WebBrowser control itself, using an IE 4 feature which allows documents to
 make themselves editable. However, our code only invokes the edit mode, and
 does nothing beyond that.</p>
 
-<pre><span style="mso-spacerun: yes">    </span>protected void mnuFileEdit_Click(object sender, EventArgs e)<o:p></o:p></pre><pre><span style="mso-spacerun: yes">    </span>{<o:p></o:p></pre><pre><span style="mso-spacerun: yes">      </span>IHTMLDocument2 doc;<o:p></o:p></pre><pre><span style="mso-spacerun: yes">      </span>object boxDoc = m_axWebBrowser.Document;<o:p></o:p></pre><pre><span style="mso-spacerun: yes">      </span>doc = (IHTMLDocument2)boxDoc;<o:p></o:p></pre><pre><span style="mso-spacerun: yes">      </span>doc.designMode = &quot;On&quot;;<o:p></o:p></pre><pre><span style="mso-spacerun: yes">    </span>}</pre>
+<pre>
+protected void mnuFileEdit_Click(object sender, EventArgs e)
+    {
+      IHTMLDocument2 doc;
+      object boxDoc = AxWebBrowser.Document;
+      doc = (IHTMLDocument2)boxDoc;
+      doc.designMode = "On";
+    }
+</pre>
 
-<p class=MsoNormal>The code first creates an object and then unboxes it to get
-to the IHTMLDocument2 interface. This is necessary because the WB control
-returns the document as an object and not the interface.</p>
+<p>The code first gets a reference to the Document object and then unboxes it to get
+to the IHTMLDocument2 interface. This is necessary because the WebBrowser control
+returns the document as an object and not an IHTMLDocument2 pointer.</p>
 
 <h2>The Finished Code</h2>
 
-<p class=MsoNormal>That just about sums up most of the code. However, a lot of
+<p>That just about sums up most of the code. However, a lot of
 things do not work yet. Here is a short list:</p>
 
-<ol style='margin-top:0in' start=1 type=1>
- <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'>'Full
-     Screen' and 'View Source' in the application menus.<o:p></o:p></li>
- <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'>Enumeration
-     of the user's Favourites and History.<o:p></o:p></li>
- <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'>'Send'
-     submenu of 'File' menu.<o:p></o:p></li>
- <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'>Mail
-     button on toolbar.<o:p></o:p></li>
- <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'>Edit
-     works to only to a limited extent.<o:p></o:p></li>
- <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'>Tools
-     Menu.<o:p></o:p></li>
- <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'>Back
-     and Forward drop-downs.<o:p></o:p></li>
- <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'>Some
-     pages, especially those with frames, do not load properly.<o:p></o:p></li>
- <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'>There
-     is no handling for new windows.<o:p></o:p></li>
- <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'>Status
-     bar icons (secure, offline, zone) are not displayed.</li>
+<ol>
+ <li>'Full Screen' and 'View Source' in the application menus.</li>
+ <li>Enumeration of the user's Favourites and History.</li>
+ <li>'Send' submenu of 'File' menu.</li>
+ <li>Mail button on toolbar.</li>
+ <li>Edit works to only to a limited extent.</li>
+ <li>Tools Menu.</li>
+ <li>Back and Forward drop-downs.</li>
+ <li>Some pages, especially those with frames, do not load properly. ( ? )</li>
+ <li>There is no handling for new windows.</li>
+ <li>Status bar icons (secure, offline, zone) are not displayed.</li>
 </ol>
 
-<p class=MsoNormal>Most code should be easy to create, and can be done within
+<p>Most code should be easy to create, and can be done within
 the .NET Framework. However, some functions, like those for favourites and
 history, shall involve PInvoke.</p>
 
-</div>
-
-</body>
-
-</html>
+<!-- Article Ends -->
