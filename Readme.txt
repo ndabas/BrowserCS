@@ -15,6 +15,12 @@ work, but they involve PInvoke, which did not work very well when I tried
 and regularly crashed my application. I suppose it is just a bug in Beta 1
 of the .NET Framework and should be corrected later.
 
+See http://www.codeproject.com/useritems/webbrowser.asp for more.
+
+Building the project
+The file Build.bat builds the app itself. Before that, you must run ImpLibs.bat
+to create the neccessary imported libraries.
+
 This is not a final or complete implementation and could be considered a
 beta relese. A lot of work needs to be done. Here is a short list:
 1.  'Full Screen' and 'View Source' in the application menus.
